@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title> Pepega </title>
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="signin.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    
+    <body id="pageTop">
+    <div class="main">
+        
+        <header id="header">
+            <div class="content">
+            
+                
+                <div class="column logo">
+                    <a href="index.html"><img id="main-logo" src="img/brain.png" alt="Conference logo"></a>
+                </div>
+                
+                <div id="horizontalLine">
+                </div>
+                
+                <div class="column" id="web_title">
+                    <a href="index.html"><h1>SHORT MEMORY</h1></a>
+                </div>
+            
+                <div id="navigation_menu" class="column overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div id="overlay-content">
+                        <ul>
+                            <li><a class="navLink" href="#tests-anchor">Tests</a></li>
+                            <li><a class="navLink" href="#">Stats</a></li>
+                            <li><a class="navLink" href="signin.html">Sign in</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column nav_button_block">
+                    <span id="nav_button" onclick="openNav()">&#9776;</span>
+                </div>
+                    
+                <script>
+                    window.onresize = closeNav;
+                    function openNav() {
+                      document.getElementById("navigation_menu").style.width = "100%";
+                    }
+                    function closeNav() {
+                        if (document.documentElement.clientWidth > 800){
+                            document.getElementById("overlay-content").style.width = "50%";
+                        } else{
+                            document.getElementById("navigation_menu").style.width = "0%";
+                        }
+                    }
+                </script>
+                </div>
+        </header>
+        
+        <section id="section-contact">
+            <div class="content">
+                <hr>
+                <h2>SIGN IN</h2>
+                <div class="column inputContact">
+                    <form method="post" action="register.php">
+                        <p>username:</p><input placeholder="login123" type="text" name="username" required>
+                        <p>firstname:</p><input placeholder="name" type="text" name="first_name">
+                        <p>surname:</p><input placeholder="surname" type="text" name="surname">
+                        <p>email</p><input placeholder="mail@mail.com" type="text" name="email">
+                        <p>password</p><input placeholder="password" type="password" name="password_1">
+                        <p>repeat password</p><input placeholder="password" type="password" name="password_2">
+                    </form>
+                    <div class="button">
+                        <button>Sign in</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        
+        <footer id="footer">
+            <div class="content">
+                
+                 <div class="socials">
+                    <a href="https://www.facebook.com/FIT.VUT/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/FIT_VUT" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/fit.vut/" class="fa fa-instagram"></a>
+                </div>
+                
+                <div class="copyright">
+                    <p>Created by Marek Žiška (xziska03) @ VUT FIT, ITU 2019</p>
+                    <p>Images are not my own.</p>
+                </div>
+            </div>
+        </footer>
+    
+        
+    </div>
+        
+    <script src="js/divlink.js"></script>
+    <script src="js/smooth_scroll.js"></script>
+    </body>
+</html>

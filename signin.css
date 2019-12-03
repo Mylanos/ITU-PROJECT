@@ -1,0 +1,345 @@
+*{
+    font-family: 'Abel', serif;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/***********************HEADER***********************/
+#header{
+    background-color: whitesmoke;
+    height: 120px;
+    position: fixed;
+    top: 0; 
+    width: 100%; /* Full width */
+    z-index: 1;
+    transition: 0.4s;
+}
+#header .content{
+    margin: auto;
+    display: block;
+    overflow: auto;
+}
+#header .content .column{
+    float: left;
+    width: 33%;
+    margin: auto;
+}
+
+#header .content .logo{
+    width: 135px;
+}
+
+#header .content #main-logo{
+    width: 100%;
+    height: auto;
+    margin: 10px 2px;
+}
+
+#header .content #horizontalLine{
+    margin-top: 28px;
+    height: 60px;
+    float: left;
+    border-left: solid;
+    color: black;
+    border-width: 1px;
+    margin-left: -10px;
+    transition: 0.4s;
+}
+
+#header .content #web_title{
+    margin: 23px 5px;
+    letter-spacing: 1px;
+    width: 36%;
+}
+#header .content #web_title h1{
+    font-size: 27px;
+    text-align: center;
+    color: black;
+}
+
+#header .content .nav_button_block{
+    margin-right: 5px;
+}
+
+#header .content #nav_button{
+    float: right;
+    margin-top: 28px;
+    margin-right: 10px;
+    height: 30px;
+    cursor:pointer;
+    font-size: 39px;
+}
+
+#header .content #nav_button:hover{
+    color: #49c9e3;
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 800px){
+
+    /* The Overlay (background) */
+    #header .content .overlay {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+        height: 100%;
+        width: 0;
+        position: fixed; /* Stay in place */
+        background-color: rgb(0,0,0); /* Black fallback color */
+        background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition slide */
+    }
+
+    /* Position the content inside the overlay */
+    #overlay-content {
+        position: relative;
+        top: 5%; /* 25% from the top */
+        left: 0%;
+        width: 0; /* 100% width */
+        text-align: center;
+        margin-top: auto; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+
+    /* The navigation links inside the overlay */
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        height: 50px;
+        font-size: 36px;
+        color: #818181;
+        display: block; /* Display block instead of inline */
+        transition: 0.3s; /* Transition effects on hover (color) */
+    }
+    
+    .overlay p{
+        width: 100%;
+    }
+
+    .overlay #overlay-content .navLink{
+        left: 0px;
+        padding: 8px;
+        font-size: 36px;
+        transition: 0.3s; /* Transition effects on hover (color) */
+        margin-left: -30px;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .overlay a:hover, .overlay a:focus {
+        color: #49c9e3;
+    }
+
+    /* Position the close button (top right corner) */
+    .overlay .closebtn {
+        text-align: right;
+        margin: auto;
+        top: 20px;
+        right: 100px;
+        font-size: 60px;
+        margin-right: 20px;
+    }
+
+    /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+}
+
+@media only screen and (min-width: 800px){
+    /*navbar*/
+    #header .content .nav_button_block{
+        display: none;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    #header .content .closebtn{
+        display: none;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    
+    #overlay-content li{
+        float: left;
+    }
+    
+    #overlay-content .navLink{
+        color: black;
+        width: 20%;
+        transition: 0.3s;
+        margin:auto;
+    }
+    #overlay-content{
+        text-align: center; /* Centered text/links */
+        font-size: 24px;
+        margin: auto;
+        margin-left: 120px;
+        margin-top: 23px;
+        padding: 0;
+        width: 100%;
+        margin-top: 40px;
+        transition: 0.3s;
+        display: block;
+        position: fixed;
+    }
+    #overlay-content a{
+        text-align: center;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+    #overlay-content a:hover{
+        color: #49c9e3;
+        border-bottom: solid;
+        border-width: 2px;
+        padding: 0px;
+    }
+    /*navbar*/
+    #header{
+        height: 140px;
+        transition: 0.5s;
+    }
+    #header .logo #main-logo{
+        width: 180px;
+        margin-right: 40px;
+        transition: 0.5s;
+    }
+    #header .content #horizontalLine{
+        height: 80px;
+        margin-left: 20px;
+        margin-top: 34px;
+        transition: 0.5s;
+    }
+    #header .content #web_title{
+        margin-left: -20px;
+        transition: 0.5s;
+        margin-top: 40px;
+    }
+  
+}
+
+/***********************HEADER***********************/
+
+#section-contact .content{
+    margin-top: 3cm;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+#section-contact hr{
+    margin: 1cm 2cm;
+}
+#section-contact h2{
+    color: black;
+    width: 50%;
+    text-align: center;  
+    margin: auto;
+    padding: 10px;
+    font-size: 29px;
+}
+#section-contact .inputContact{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+#section-contact .content input{
+    width: 100%;
+    height: 20px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    margin: 21px 10px;
+}
+#section-contact .content textarea{
+    width: 80%;
+    height: 200px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    margin: 20px 10px;
+}
+#section-contact button{
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    color: black;
+    margin-top: 2cm;
+    font-size: 25px;
+    border: solid;
+    border-width: 1px;
+}
+#section-contact button:hover{
+    color: white;
+    background-color:  #49c9e3;
+    transition: 0.4s;
+}
+#section-contact .button{
+    text-align: center;
+    margin: auto;
+}
+
+
+/***********************FOOTER************************/
+
+#footer .content{
+    background-color: black;
+    height: 100%;
+    bottom: 0;
+    width: 100%;
+
+}
+.socials{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.socials .fa{
+    color: white;
+    padding: 18px;
+    font-size: 23px;
+    width: 18px;
+    border-bottom: solid;
+    border-width: 1px;
+}
+.socials .fa-twitter:hover{
+    color: #00aced;
+    border-color: #00aced;
+}
+.socials .fa-instagram:hover{
+    color: #E1306C;
+    border-color: #E1306C;
+}
+.socials .fa-facebook:hover{
+    color: #3C5A99;
+    border-color: #3C5A99;
+}
+
+#footer .copyright p{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+}
+/***********************FOOTER************************/
