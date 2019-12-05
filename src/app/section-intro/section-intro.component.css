@@ -1,0 +1,96 @@
+/***********************INTRO************************/
+#section-intro{
+    background-color: #1d1e22;
+    width: 100%;
+    height: 650px;
+}
+#section-intro .content{
+    margin-top: 50px;
+    display: block;
+    overflow: auto;
+    height: 640px;
+    color: white;
+}
+
+#section-intro .content .intro-logo-block{
+    width: 250px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#section-intro .content #intro-logo{
+    width: 100%;
+}
+
+#section-intro .content #welcome-title{
+    width: 400px;
+    margin: 40px auto;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#section-intro .content #welcome-title h2{
+    width: 100%;
+    text-align: center;
+}
+
+#section-intro .content #welcome-text{
+    width: 400px;
+    margin: auto;
+}
+
+#section-intro .content #welcome-text p{
+    width: 100%;
+    text-align: center;
+}
+
+#section-intro .content #welcome-butt-box{
+    margin: 70px auto;
+    width: 200px;
+}
+
+#section-intro .content #welcome-butt-box p{
+    border: solid;
+    text-align: center;
+    border-width: 3px;
+    padding: 10px 40px;
+    border-color: white;
+    color: white;
+}
+
+#section-intro .content #welcome-butt-box p:hover{
+    border-color:#49c9e3;
+    color: #49c9e3;
+    transition: 0.2s;
+}
+
+@media only screen and (min-width: 800px){
+    #section-intro{
+        width: 100%;
+        overflow: hidden;
+        height: 750px;
+    }
+    #section-intro .content{
+        height: 100%;
+    }
+    #section-intro .content #welcome-title{
+        font-size: 25px;
+        letter-spacing: 1px;
+        width: 50%;
+    }
+    #section-intro .content .intro-logo-block{
+        width: 100%;
+    }
+    #section-intro .content #intro-logo{
+        width: 26%;
+        transition: 0.4s;
+        margin-top: 0.4cm;
+    }
+    #section-intro .content #welcome-text{
+        font-size: 19px;
+        transition: 0.4s;
+    }
+}
+
+
+/***********************INTRO************************/
