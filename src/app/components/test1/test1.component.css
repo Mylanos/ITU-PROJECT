@@ -1,0 +1,81 @@
+.testWindow {
+    text-align: center;
+}
+
+#frontWindow {
+    color: white;
+    position: absolute;
+    z-index: 100;
+    width: 60vw;
+    height: 60vh;
+    display: inline-block;
+    background-color: rgba(32, 54, 75, 0.96);
+    text-align: center;
+    margin-top: 10vh;
+    margin: 10vw;
+    border-radius: 10px;
+}
+
+#frontTime {
+    display: none;
+}
+
+#test {
+    width: 80vh;
+    height: 80vh;
+    display: inline-block;
+    background-color: orange;
+}
+
+#display {
+    background-color: white;
+    border-radius: 10px;
+    margin: 30vh;
+    margin-top: 12vh;
+    margin-bottom: 10vh;
+    height: 20vh;
+    font-size: 10vh;
+    text-align: center;
+}
+
+#display {
+    display: inline-block;
+    margin-top: 4vh;
+}
+
+#result {
+    display: none;
+}
+
+#nextRound {
+    display: none;
+}
+
+#keyboard {
+    display: none;
+    width: 240px;
+    background-color: white;
+    margin-top: 30vh;
+}
+
+.num, .empty {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-radius: 50%;
+}
+.num:focus, .empty:focus {
+    outline: 0;
+}
+
+.num:active{
+    font-weight: bold;
+}
+
+.num {
+    cursor: pointer;
+}
+.empty {
+    border-style: none;
+}
