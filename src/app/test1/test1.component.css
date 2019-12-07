@@ -4,6 +4,7 @@
     margin-bottom: 100px;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .testWindow h2{
     text-align: center;
@@ -14,14 +15,15 @@
     color: black;
     position: absolute;
     z-index: 1;
-    width: 20vw;
-    height: 20vh;
-    display: inline-block;
+    width: 50vh;
+    height: 30h;
     background-color: white;
+    display: inline-block;
     text-align: center;
-    margin:auto;
+    margin: auto;
+    margin-left: 130px;
     margin-top: 300px;
-    margin-left: 210px;
+    padding-bottom: 20px;
     border-radius: 10px;
 }
 #frontWindow #btn{
