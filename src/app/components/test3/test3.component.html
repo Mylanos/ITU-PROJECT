@@ -1,1 +1,23 @@
-<p>test3 works!</p>
+<div class="testWindow">
+    <div id="frontWindow">
+        <p id="frontText">
+            Short explanation of how it works.
+        </p>
+        <p id="frontTime">
+            {{getTimeCounter()}}
+        </p>
+        <button id="btn" (click)="explClick()" >I understand</button>
+    </div>
+
+    <div id="test">
+        <img src={{getImgSource()}}>
+        <p>Points: {{getPoints()}}</p>
+        <button (click)="btnClick()">Click me</button>
+    </div>
+
+    <div id="results">
+        <p>Points: {{getPoints()}}</p>
+        <button (click)="restartTest()">Play again</button>
+    </div>
+
+</div>

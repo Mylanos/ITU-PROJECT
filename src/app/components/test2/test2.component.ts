@@ -23,7 +23,6 @@ export class Test2Component implements OnInit {
   private result = "Doebal si to. haha";
 
   ngOnInit() {
-    console.log("doing oninit()");
     //vyplní sa 9 indexov flag array
     for(var f=0; f<9; f++) {
       this.hideNumbersFlag.push(false);
@@ -84,7 +83,6 @@ export class Test2Component implements OnInit {
   }
 
   startTest() {
-    console.log("starting test");
     document.getElementById("results").style.display = "none";            //hide results
     document.getElementById("countBar").className = "animate";            //change class to start animation
     document.getElementById("countDown").style.display = "inline-block";  //display countdown
@@ -138,7 +136,6 @@ export class Test2Component implements OnInit {
   }
 
   restartTest() {
-    console.log("restarting");
     for(var i=0; i<9; i++) {
       this.hideNumbersFlag.pop();
       this.genNumberArray.pop();
