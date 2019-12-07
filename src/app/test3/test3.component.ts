@@ -1,6 +1,8 @@
 
 /*
-Test pozostáva z náhodne sa generujúcich obrázkov 
+Test pozostáva z náhodne sa generujúcich obrázkov, úlohou si je zapamätať vygenerované obrázky, 
+ak sa obrazok zopakuje a ak užívateľ si to všimne, na obrázok klikne tak sa mu zvýši skore.. nvm dalej
+som to moc nedomyslel.. možno nejak odpočitavať skore za zlu odpoved / alebo po nej hned test skončiť...
 */
 
 import { Component, OnInit } from '@angular/core';
