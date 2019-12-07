@@ -1,0 +1,14 @@
+#header {
+    max-width: 80vw;
+    padding-left: 10vw;
+}
+
+#home {
+    color: black;
+    float: left;
+}
+
+#profile {
+    color: black;
+    float: right;
+}

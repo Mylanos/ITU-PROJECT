@@ -1,0 +1,65 @@
+.testWindow {
+    text-align: center;
+}
+
+#frontWindow {
+    color: white;
+    z-index: 100;
+    width: 60vw;
+    height: 60vh;
+    display: inline-block;
+    background-color: rgba(32, 54, 75, 0.96);
+    text-align: center;
+    margin-top: 10vh;
+    margin: 10vw;
+    border-radius: 10px;
+}
+
+#frontTime {
+    display: none;
+}
+#test {
+    display: none;
+    width: 50vw;
+}
+
+#matrixNumber {
+    width: 10vw;
+    height: 10vw;
+    margin: 2vw;
+}
+
+
+#countDown {
+    display: none;
+    width: 70vw;
+    height: 5vh;
+    border-style: solid;
+    border-color: black;
+}
+
+#countBar {
+    width: 70vw;
+    height: 5vh;
+    background-color: blue;
+}
+
+#results {
+    display: none;
+}
+
+.animate {
+    animation-name: countdown;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes countdown {
+    from {
+        width: 70vw;
+    }
+    to {
+        width: 0;
+    }
+  }

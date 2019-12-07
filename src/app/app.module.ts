@@ -8,6 +8,7 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { Test1Component } from './components/test1/test1.component';
 import { Test2Component } from './components/test2/test2.component';
 import { Test3Component } from './components/test3/test3.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Test3Component } from './components/test3/test3.component';
     MainMenuComponent,
     Test1Component,
     Test2Component,
-    Test3Component
+    Test3Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

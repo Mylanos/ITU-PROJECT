@@ -8,8 +8,6 @@ za toto kolo 3 body, pretože správne zadal 3 číslice.
 */
 
 import { Component, OnInit } from '@angular/core';
-import { I18nSelectPipe } from '@angular/common';
-import { range } from 'rxjs';
 
 @Component({
   selector: 'app-test1',
