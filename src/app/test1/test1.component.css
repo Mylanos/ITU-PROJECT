@@ -162,15 +162,3 @@
 .empty {
     border-style: none;
 }
-
-@media only screen and (max-width: 800px){
-    #test {
-        width: 60vh;
-    }
-    #frontWindow{
-        width: 40vh;
-        margin-top: 180px;
-        margin-left: 80px;
-    }
-
-}
