@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SectionTestsComponent } from '../section-tests/section-tests.component'
 
 @Component({
   selector: 'app-section-intro',

@@ -5,7 +5,7 @@
     height: 650px;
 }
 #section-intro .content{
-    margin-top: 50px;
+    margin-top: 120px;
     display: block;
     overflow: auto;
     height: 640px;
@@ -14,7 +14,7 @@
 
 #section-intro .content .intro-logo-block{
     width: 250px;
-    margin: 30px auto;
+    margin: 40px auto;
     text-align: center;
 }
 
@@ -63,15 +63,15 @@
     color: #49c9e3;
     transition: 0.2s;
 }
-
 @media only screen and (min-width: 800px){
     #section-intro{
         width: 100%;
         overflow: hidden;
-        height: 750px;
+        height: 830px;
     }
     #section-intro .content{
         height: 100%;
+        margin-top: 140px;
     }
     #section-intro .content #welcome-title{
         font-size: 25px;
@@ -89,6 +89,11 @@
     #section-intro .content #welcome-text{
         font-size: 19px;
         transition: 0.4s;
+    }
+}
+@media only screen and (min-width: 1700px){
+    #section-intro{
+        height: 1001px;
     }
 }
 

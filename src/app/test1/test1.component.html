@@ -1,0 +1,44 @@
+<div class="testWindow">
+        <h2>NUMBERS TEST</h2>
+        <div id="frontWindow">
+            <p id="frontText">
+                This test generates numbers, your goal is to remember as many numbers as you can. The test consists of more levels, which are getting harder each time you proceed.
+            </p>
+            <p id="frontTime">
+                {{getTimeCounter()}}
+            </p>
+            <button id="btn" (click)="explClick()" >I understand</button>
+        </div>
+    
+        <div id="test">
+            <div id="display">
+                <p id="numbers">{{getRandomTestNum()}}</p>
+            </div>
+    
+            <div id="results_box">
+                <div id="input">
+                    <p id="numbers">Your input: {{getInputNumbers()}}</p>
+                </div>
+                <div id="result">
+                    <p class="input_class">{{getResult()}}</p>
+                </div>
+        
+                <a id="nextRound" nextRound (click)="nextRound()">Next round</a>
+            </div>
+
+            <div id="keyboard">
+                <button class="num" (click)="numberClick(1)">1</button>
+                <button class="num" (click)="numberClick(2)">2</button>
+                <button class="num" (click)="numberClick(3)">3</button>
+                <button class="num" (click)="numberClick(4)">4</button>
+                <button class="num" (click)="numberClick(5)">5</button>
+                <button class="num" (click)="numberClick(6)">6</button>
+                <button class="num" (click)="numberClick(7)">7</button>
+                <button class="num" (click)="numberClick(8)">8</button>
+                <button class="num" (click)="numberClick(9)">9</button>
+                <button class="empty"></button>
+                <button class="num" (click)="numberClick(0)">0</button>
+                <button class="empty"></button>
+            </div>
+        </div>
+    </div>

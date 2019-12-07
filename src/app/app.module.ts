@@ -9,6 +9,10 @@ import { SectionIntroComponent } from './section-intro/section-intro.component';
 import { SectionTestsComponent } from './section-tests/section-tests.component';
 import { FooterComponent } from './footer/footer.component'
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { StatsComponent } from './stats/stats.component';
+import { SigninComponent } from './signin/signin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Test1Component } from './test1/test1.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
     HeaderComponent,
     SectionIntroComponent,
     SectionTestsComponent,
-    FooterComponent
+    FooterComponent,
+    StatsComponent,
+    SigninComponent,
+    Test1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

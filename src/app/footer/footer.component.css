@@ -1,6 +1,7 @@
 /***********************FOOTER************************/
 #footer{
-    height: 150px;
+    height: 200px;
+    bottom: 0;
 }
 #footer .content{
     background-color: black;

@@ -1,0 +1,145 @@
+.testWindow {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    height: 100%;
+    width: 100%;
+}
+.testWindow h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#frontWindow {
+    color: black;
+    position: absolute;
+    z-index: 1;
+    width: 20vw;
+    height: 20vh;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    margin:auto;
+    margin-top: 300px;
+    margin-left: 210px;
+    border-radius: 10px;
+}
+#frontWindow #btn{
+    margin-top: 15px;
+    padding: 2px 15px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+}
+#frontWindow #btn:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+}
+#frontWindow p{
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 17px;
+}
+
+#frontTime {
+    display: none;
+}
+
+#test {
+    width: 80vh;
+    height: 78vh;
+    display: inline-block;
+    background-color: black;
+    border-radius: 10px;
+}
+#test #results_box{
+    font-size: 20px;
+    background-color:white;
+    height: 18vh;
+    width: 22vh;
+    text-align: center;
+    display: none;
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 10px;
+}
+#display {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    height: 18vh;
+    width: 22vh;
+    font-size: 10vh;
+    text-align: center;
+    display: none;
+}
+#display p{
+    text-align: center;
+}
+#result {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 0px;
+}
+#test #results_box .input_class{
+    text-align: center;
+    margin: auto;
+}
+#test #results_box #nextRound{
+    margin-top: 20px;
+    padding: 2px 15px;
+    font-size: 17px;
+    border-width: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#test #results_box #nextRound:hover{
+    padding: 2px 15px;
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+    font-size: 17px;
+}
+
+#keyboard {
+    width: 240px;
+    display: block;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    margin-top: 12vh;
+    border-radius: 10px;
+    display: none;
+}
+
+.num, .empty {
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-radius: 50%;
+}
+.num:focus, .empty:focus {
+    outline: 0;
+}
+
+.num:hover{
+    background-color: #49c9e3;
+    transition: 0.4s;
+    font-weight: bolder;
+}
+.num {
+    cursor: pointer;
+}
+.empty {
+    border-style: none;
+}

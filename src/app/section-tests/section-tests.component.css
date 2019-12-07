@@ -44,7 +44,7 @@
     border-width: 2px;
     width: 100%;
     padding-top: 2px;
-    height: 30px;
+    height: 40px;
     font-size: 20px;
 }
 
@@ -62,8 +62,8 @@
 #section-tests .content .column #test1-pic{
     width: 100%;
     margin: auto;
-    margin-bottom: 65px;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-top: 34px;
 }
 
 #section-tests .content .column #test2-pic{
@@ -75,8 +75,8 @@
 #section-tests .content .column #test3-pic{
     width: 100%;
     margin: auto;
-    margin-bottom: 25px;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 28px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -102,6 +102,25 @@
     }
     #section-tests .content .all-tests{
         margin-top: 50px;
+    }
+    #section-tests .content .column #test1-pic{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 60px;
+        margin-top: 64px;
+    }
+    
+    #section-tests .content .column #test2-pic{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 33px;
+        margin-top: 1px;
+    }
+    #section-tests .content .column #test3-pic{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 28px;
     }
 
 }

@@ -1,44 +1,30 @@
 <header id="header">
-    <div class="content">
+    <div ng-controller="myCtrl" (window:resize)="closeNav()" class="content">
     
         
         <div class="column logo">
-            <a ><img id="main-logo" src="../assets/img/brain.png" alt="Conference logo"></a>
+            <a routerLink="/domain"><img id="main-logo" src="../assets/img/brain.png" alt="Conference logo"></a>
         </div>
         
         <div id="horizontalLine">
         </div>
         
         <div class="column" id="web_title">
-            <a><h1>SHORT MEMORY</h1></a>
+            <a routerLink="/domain"><h1>SHORT MEMORY</h1></a>
         </div>
     
         <div id="navigation_menu" class="column overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
             <div id="overlay-content">
                 <ul>
-                    <li><a class="navLink" href="#section-tests">Tests</a></li>
-                    <li><a class="navLink" >Stats</a></li>
-                    <li><a class="navLink" >Sign in</a></li>
+                    <li><a class="navLink" href="#section-tests" target="_self">Tests</a></li>
+                    <li><a class="navLink" href="">Stats</a></li>
+                    <li><a (click)="closeNav()" class="navLink" routerLink="/signin">Sign in</a></li>
                 </ul>
             </div>
         </div>
         <div class="column nav_button_block">
-            <span id="nav_button" onclick="openNav()">&#9776;</span>
+            <span id="nav_button" (click)="openNav()">&#9776;</span>
         </div>
-            
-        <script>
-            window.onresize = closeNav;
-            function openNav() {
-              document.getElementById("navigation_menu").style.width = "100%";
-            }
-            function closeNav() {
-                if (document.documentElement.clientWidth > 800){
-                    document.getElementById("overlay-content").style.width = "50%";
-                } else{
-                    document.getElementById("navigation_menu").style.width = "0%";
-                }
-            }
-        </script>
         </div>
 </header>
