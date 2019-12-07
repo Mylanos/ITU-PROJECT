@@ -4,7 +4,7 @@
     margin-bottom: 100px;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 .testWindow h2{
     text-align: center;
@@ -89,9 +89,26 @@
     background-color: white;
     padding: 5px 0px;
 }
-#test #results_box .input_class{
+#test #results_box p{
     text-align: center;
     margin: auto;
+}
+#test1_reload{
+    display: none;
+    text-align: center;
+}
+#btn_reload{
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    padding: 2px 15px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+}
+#btn_reload:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
 }
 #test #results_box #nextRound{
     margin-top: 20px;
@@ -144,4 +161,16 @@
 }
 .empty {
     border-style: none;
+}
+
+@media only screen and (max-width: 800px){
+    #test {
+        width: 60vh;
+    }
+    #frontWindow{
+        width: 40vh;
+        margin-top: 180px;
+        margin-left: 80px;
+    }
+
 }

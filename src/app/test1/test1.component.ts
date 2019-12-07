@@ -136,6 +136,7 @@ export class Test1Component {
     }
     document.getElementById("input").style.display = "none";
     document.getElementById("result").style.display = "initial";
+    document.getElementById("test1_reload").style.display = "block";
     this.result = "You achieved " + this.points.toString() + " points";
   }
 
@@ -149,6 +150,10 @@ export class Test1Component {
 
   getRandomTestNum() {
     return this.randomTestNum;
+  }
+
+  reloadPage(){
+    location.reload();
   }
 
 }
