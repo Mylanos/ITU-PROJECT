@@ -13,6 +13,7 @@ import { StatsComponent } from './stats/stats.component';
 import { SigninComponent } from './signin/signin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Test1Component } from './test1/test1.component';
+import { Test3Component } from './test3/test3.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Test1Component } from './test1/test1.component';
     FooterComponent,
     StatsComponent,
     SigninComponent,
-    Test1Component
+    Test1Component,
+    Test3Component
   ],
   imports: [
     BrowserModule,
