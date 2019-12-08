@@ -69,3 +69,12 @@
     border-color: #49c9e3;
     transition: 0.2s;
 }
+@media only screen and (max-width: 800px){
+    #section-contact{
+        height: 135vw;
+    }
+   #section-contact .inputContact{
+        width: 90vw;
+   }
+
+}

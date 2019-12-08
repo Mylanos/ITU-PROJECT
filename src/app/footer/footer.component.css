@@ -36,11 +36,13 @@
     color: #3C5A99;
     border-color: #3C5A99;
 }
-
+#footer .copyright{
+    margin-top: 16px;
+}
 #footer .copyright p{
     color: white;
     letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 14px;
     text-align: center;
 }

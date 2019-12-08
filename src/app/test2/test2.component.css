@@ -1,0 +1,159 @@
+.testWindow {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 70px;
+    height:970px;
+    width: 100%;
+    overflow: auto;
+
+}
+.testWindow h2{
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#frontWindow {
+    color: black;
+    position: absolute;
+    z-index: 1;
+    width: 50vh;
+    height: 30h;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    margin-left:  -190px;
+    margin-top: 300px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+#frontWindow #btn{
+    margin-top: 15px;
+    padding: 2px 15px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+    font-size: 18px;
+}
+#frontWindow #btn:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+}
+#frontWindow p{
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 17px;
+}
+
+#frontTime {
+    display: none;
+}
+#frontText{
+    font-size: 22px;
+}
+#testBlock {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    width: 100vh;
+    height: 67%;
+    background-color: rgba(32, 54, 75, 0.96);
+    border-radius: 10px;
+}
+
+#test{
+    text-align: center;
+    margin: auto;
+    display: none;
+    width: 30vw;
+    margin-top: 5vw;
+}
+
+#matrixNumber {
+    background-color: white;
+    width: 7vw;
+    font-size: 18px;
+    height: 7vw;
+    margin: 1vw;
+    text-align: center;
+}
+#matrixNumber:hover {
+    background-color: #49c9e3;
+    border-color: #49c9e3;
+}
+
+
+#countDown {
+    display: none;
+    text-align: center;
+    margin:auto;
+    width: 30vw;
+    height: 3vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-top: 4vh;
+}
+
+#countBar {
+    width: 30vw;
+    height: 3vh;
+    background-color: #49c9e3;
+}
+
+#results {
+    display: none;
+    margin-top: 100px;
+}
+
+.animate {
+    animation-name: countdown;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes countdown {
+    from {
+        width: 30vw;
+    }
+    to {
+        width: 0;
+    }
+  }
+
+@media only screen and (max-width: 700px){
+    #testBlock {
+        width: 60vh;
+        height: 58%;
+    }
+    #frontWindow{
+        width: 40vh;
+        margin-top: 180px;
+        margin-left:  -140px;
+    }
+    #countDown{
+        margin:auto;
+        margin-top: 80px;
+        width: 50vw;
+    }
+    #countBar {
+        width: 100%;
+        height: 3vh;
+        background-color: #49c9e3;
+    }
+    #test{
+        width: 72vw;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #matrixNumber{
+        height: 13vw;
+        width: 13vw;
+        margin: 3vw;
+    }
+
+}

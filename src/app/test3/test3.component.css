@@ -1,0 +1,79 @@
+.testWindow {
+    text-align: center;
+    margin: auto;
+    margin-top: 160px;
+    height: 750px;
+}
+.testWindow h2 {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#frontWindow {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    width: 70vh;
+    height: 15vw;
+    background-color: rgba(32, 54, 75, 0.96);
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    margin-left:  -290px;
+    margin-top: 100px;
+    padding: 3vw;
+    border-radius: 10px;
+}
+#frontWindow #btn{
+    margin-top: 15px;
+    padding: 2px 15px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+    font-size: 18px;
+}
+#frontWindow #btn:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+}
+#frontWindow p{
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 17px;
+}
+
+#frontTime {
+    display: none;
+    width: 70vw;
+}
+
+#test {
+    display: none;
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+}
+#test button{
+    margin-top: 15px;
+    padding: 8px 28px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+    font-size: 18px;
+}
+
+#test button:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+}
+
+#results {
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: 50vw;
+}

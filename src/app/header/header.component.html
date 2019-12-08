@@ -17,7 +17,7 @@
             <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
             <div id="overlay-content">
                 <ul>
-                    <li><a class="navLink" href="#section-tests" target="_self">Tests</a></li>
+                    <li><a (click)="closeNav()"class="navLink" href="#section-tests" target="_self">Tests</a></li>
                     <li><a class="navLink" href="">Stats</a></li>
                     <li><a (click)="closeNav()" class="navLink" routerLink="/signin">Sign in</a></li>
                 </ul>
