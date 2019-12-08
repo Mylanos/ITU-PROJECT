@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <section id="section-contact">
     <div class="content">
         <hr>
         <h2>SIGN IN</h2>
+         <button (click)="signinUser()">Click me</button> 
         <div class="column inputContact">
-            <form (submit)="signinUser()">
+            <form (submit)="signinUser()" method="POST" action="#">
                 <div class="column1">
                     <p>firstname:</p><input placeholder="name" type="text" name="first_name">
                 </div>
@@ -15,7 +17,7 @@
                 <p>password</p><input placeholder="password" type="password" name="password_1" required>
                 <div class="button-content">
                     <div class="_button">
-                        <input (click)="signinUser()"placeholder="SIGN IN" type="submit">
+                        <input (click)="signinUser()" placeholder="SIGN IN" type="submit">
                     </div>
                 </div>
             </form>
