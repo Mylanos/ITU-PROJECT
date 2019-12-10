@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { Test3Component } from './test3/test3.component';
     SigninComponent,
     Test1Component,
     Test2Component,
-    Test3Component
+    Test3Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
