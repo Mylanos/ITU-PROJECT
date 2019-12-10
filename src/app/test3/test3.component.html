@@ -8,17 +8,16 @@
             {{getTimeCounter()}}
         </p>
         <button id="btn" (click)="explClick()" >I understand</button>
+        <div id="results">
+                <p>Points: {{getPoints()}}</p>
+                <button (click)="restartTest()">Play again</button>
+        </div>
     </div>
 
     <div id="test">
-        <img src={{getImgSource()}}>
-        <p>Points: {{getPoints()}}</p>
-        <button (click)="btnClick()">Click me</button>
-    </div>
-
-    <div id="results">
-        <p>Points: {{getPoints()}}</p>
-        <button (click)="restartTest()">Play again</button>
+            <p>POINTS: {{getPoints()}}</p>
+            <img src={{getImgSource()}}>
+            <button (click)="btnClick()">Click me</button>
     </div>
 
 </div>

@@ -1,12 +1,12 @@
-<header id="header">
+<header (scroll)="scrollFunction()" id="header">
     <div ng-controller="myCtrl" (window:resize)="closeNav()" class="content">
     
         
-        <div class="column logo">
+        <div id="header_logo" class="column logo">
             <a routerLink="/domain"><img id="main-logo" src="../assets/img/brain.png" alt="Conference logo"></a>
         </div>
         
-        <div id="horizontalLine">
+        <div class="column" id="horizontalLine">
         </div>
         
         <div class="column" id="web_title">
@@ -23,7 +23,7 @@
                 </ul>
             </div>
         </div>
-        <div class="column nav_button_block">
+        <div id="navigation_block" class="column nav_button_block">
             <span id="nav_button" (click)="openNav()">&#9776;</span>
         </div>
         </div>

@@ -23,7 +23,7 @@
     display: inline-block;
     text-align: center;
     margin: auto;
-    margin-left:  -190px;
+    margin-left:  -220px;
     margin-top: 300px;
     padding-bottom: 20px;
     border-radius: 10px;
@@ -103,11 +103,38 @@
     background-color: #49c9e3;
 }
 
+/*adddded*/
 #results {
     display: none;
-    margin-top: 100px;
+    margin: auto;
+    text-align: center;
+    /*added*/
+    margin-top: 60px;
+    /*added*/
+}
+/*added*/
+#results button{
+    margin-top: 60px;
+    padding: 8px 28px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+    font-size: 18px;
+}
+#results button:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
 }
 
+#results p{
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+/*adddded*/
 .animate {
     animation-name: countdown;
     animation-duration: 15s;
@@ -137,10 +164,10 @@
     #countDown{
         margin:auto;
         margin-top: 80px;
-        width: 50vw;
+        width: 30vw;
     }
     #countBar {
-        width: 100%;
+        width: 30vw;
         height: 3vh;
         background-color: #49c9e3;
     }
