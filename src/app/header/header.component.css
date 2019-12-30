@@ -6,45 +6,41 @@
     top: 0; 
     z-index: 2;
     width: 100%;
-    transition: 0.4s;
+    transition: 0.6s;
 }
 #header .content{
     margin: auto;
     display: block;
+    text-align: center;
     height: 100%;
     overflow: auto;
 }
 #header .content .column{
     float: left;
-    width: 33%;
-    margin: auto;
 }
-
-#header .content .logo{
-    width: 135px;
-}
-
-#header .content #main-logo{
-    width: 100%;
-    height: auto;
-    margin: 10px 2px;
+#main-logo{
+    width: 170px;
+    height: 100%;
+    margin: 0px auto;
+    transition: 0.6s;
 }
 
 #header .content #horizontalLine{
-    margin-top: 28px;
+    margin-top: 32px;
     height: 60px;
     float: left;
     border-left: solid;
     color: black;
     border-width: 1px;
-    margin-left: -10px;
-    transition: 0.4s;
+    margin-left: -20px;
+    transition: 0.6s;
 }
 
 #header .content #web_title{
-    margin: 45px 5px;
+    margin: 45px -5px;
     letter-spacing: 1px;
     width: 38%;
+    transition: 0.6s;
 }
 #header .content #web_title h1{
     font-size: 27px;
@@ -52,18 +48,20 @@
     color: black;
 }
 
-#header .content .nav_button_block{
-    margin-right: 5px;
-    margin-left: -20px;
+#header .content #navigation_block{
+    margin-right: 25px;
+    margin-top: 31px;
+    float: right;
+    height: 30px;
+    transition: 0.4s;
 }
 
 #header .content #nav_button{
-    float: right;
-    margin-top: 28px;
     margin-right: 5px;
-    height: 30px;
+    height: 100%;
     cursor:pointer;
     font-size: 39px;
+    transition: 0.6s;
 }
 
 @media only screen and (max-width: 800px){
@@ -144,6 +142,7 @@
     /*navbar*/
     #header .content .nav_button_block{
         display: none;
+        float: right;
         pointer-events: none;
         cursor: not-allowed;
     }
@@ -152,28 +151,21 @@
         pointer-events: none;
         cursor: not-allowed;
     }
-    
-    #overlay-content .navLink{
-        color: black;
-        width: 20%;
-        transition: 0.3s;
-        margin:auto;
-    }
-    
-    #overlay-content li{
-        display: inline-block;
-        margin-left: 2cm;
-    }
-    
     #overlay-content{
         font-size: 24px;
-        margin-left: 150px;
-        margin-top: 23px;
-        width: 100%;
+        width: 28%;
+        margin: auto;
         margin-top: 56px;
+        margin-right: 30px;
         transition: 0.3s;
-        display: block;
-        position: fixed;
+    }
+    #overlay-content .navLink{
+        text-align: center;
+        float: right;
+        color: black;
+        width: 33%;
+        transition: 0.3s;
+        margin: auto;
     }
     #overlay-content a{
         letter-spacing: 2px;
@@ -187,23 +179,29 @@
     }
     /*navbar*/
     #header{
-        height: 146px;
+        height: 140px;
         transition: 0.5s;
         width: 100%;
     }
-    #header .logo #main-logo{
+    #main-logo{
+        margin-top: 7px;
         width: 180px;
-        margin-right: 40px;
+        height: 100%;
+        margin-left: 40px;
         transition: 0.5s;
     }
     #header .content #horizontalLine{
+        width: 10px;
         height: 80px;
-        margin-left: 20px;
+        margin-left: -20px;
         margin-top: 34px;
+        margin-right: 0px;
         transition: 0.5s;
     }
     #header .content #web_title{
-        margin-left: -60px;
+        width: 200px;
+        margin-left: 0px;
+        margin-right: 100px;
         transition: 0.5s;
         margin-top: 60px;
     }

@@ -1,5 +1,8 @@
+#section-contact{
+    height: 45vw;
+}
 #section-contact .content{
-    margin-top: 3cm;
+    margin-top: 4cm;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -55,19 +58,8 @@
     width: 30%;
     margin: auto;
 }
-#section-contact ._button input{
+#section-contact ._button p, em, a{
     text-align: center;
-    height: 50px;
-    color: black;
-    font-size: 25px;
-    border: solid;
-    border-width: 1px;
-    border-color: black;
-}
-#section-contact ._button input:hover{
-    background-color:  #49c9e3;
-    border-color: #49c9e3;
-    transition: 0.2s;
 }
 @media only screen and (max-width: 800px){
     #section-contact{

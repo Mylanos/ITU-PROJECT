@@ -1,25 +1,34 @@
 <section id="section-contact">
     <div class="content">
         <hr>
-        <h2>SIGN IN</h2>
+        <h2>SIGN UP</h2>
         <div class="column inputContact">
             <form (submit)="signinUser()">
-                <div class="column1">
-                    <p>firstname:</p><input placeholder="name" type="text" name="first_name">
-                </div>
-                <div class="column1">
-                    <p>surname:</p><input placeholder="surname" type="text" name="surname">
+                <div class="form-row">
+                    <div class="column1">
+                        <p>firstname:</p><input placeholder="name" type="text" name="first_name">
+                    </div>
+                    <div class="column1">
+                        <p>surname:</p><input placeholder="surname" type="text" name="surname">
+                    </div>
                 </div>
                 <p>username:</p><input placeholder="login" type="text" name="username" required>
                 <p>email</p><input placeholder="mail@mail.com" type="text" name="email" required>
                 <p>password</p><input placeholder="password" type="password" name="password_1" required>
                 <div class="button-content">
                     <div class="_button">
-                        <input (click)="signinUser()"placeholder="SIGN IN" type="submit">
+                            <button (click)="signinUser()" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">SIGN IN</button>
+                            <hr>
+            
+                            <p>By clicking
+                                <em>Sign up</em> you agree to our
+                                <a href="" target="_blank">terms of service</a>
                     </div>
+                    
                 </div>
             </form>
         </div>
         <hr>
+        
     </div>
 </section>

@@ -16,11 +16,11 @@
     z-index: 1;
     width: 70vh;
     height: 15vw;
-    background-color: rgba(32, 54, 75, 0.96);
+    background-color: rgba(16, 25, 34, 0.96);
     display: inline-block;
     text-align: center;
     margin: auto;
-    margin-left:  -290px;
+    margin-left:  -270px;
     margin-top: 100px;
     padding: 3vw;
     border-radius: 10px;
@@ -72,8 +72,70 @@
     display: none;
     margin: auto;
     text-align: center;
+    /*added*/
+    margin-top: 60px;
+    /*added*/
+}
+/*added*/
+#results button{
+    margin-top: 60px;
+    padding: 8px 28px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+    font-size: 18px;
+}
+#results button:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+}
+#test img{
+    width: 100%;
+    height: 30vw;
+}
+#test p{
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#results p{
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: 20px;
 }
 
-img {
-    width: 50vw;
+@media only screen and (max-width: 700px){
+    #testBlock {
+        width: 60vh;
+        height: 58%;
+    }
+    #frontWindow{
+        width: 60vh;
+        height: 40vh;
+        margin-top: 100px;
+        margin-left:  -220px;
+    }
+    #test{
+        width: 72vw;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #matrixNumber{
+        height: 13vw;
+        width: 13vw;
+        margin: 3vw;
+    }
+    #frontWindow p{
+        margin-top: 10px;
+    }
+    #test img{
+        height: 60vw;
+        width: 100%;
+
+    }
+
 }

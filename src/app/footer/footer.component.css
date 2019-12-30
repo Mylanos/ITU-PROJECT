@@ -2,12 +2,14 @@
 #footer{
     height: 200px;
     bottom: 0;
+    width: 100%;
 }
 #footer .content{
-    background-color: black;
+    background-color: rgba(10, 16, 22, 0.96);
     height: 100%;
     bottom: 0;
-    width: 100%;
+    text-align: center;
+    margin: auto;
 }
 .socials{
     width: 100%;

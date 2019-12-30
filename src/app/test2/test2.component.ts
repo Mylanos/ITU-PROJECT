@@ -20,10 +20,9 @@ export class Test2Component implements OnInit {
   private hideNumbersFlag: boolean [] = new Array();
   private testStartFlag = false;
   private expectedInput = 1;
-  private result = "Doebal si to. haha";
+  private result = "Your score: ";
 
   ngOnInit() {
-    console.log("doing oninit()");
     //vyplní sa 9 indexov flag array
     for(var f=0; f<9; f++) {
       this.hideNumbersFlag.push(false);
@@ -132,7 +131,10 @@ export class Test2Component implements OnInit {
     document.getElementById("frontTime").style.display = "none";
     document.getElementById("frontText").style.display = "none";
     if(state){
-      this.result = "U lucker... or cheater";
+      this.result = "U lucker (or cheater) achieved 9 points + extra hyper bonus +10p";
+    } else {
+      this.expectedInput -= 1;
+      this.result = this.result + this.expectedInput.toString();
     }
   }
 
@@ -141,13 +143,12 @@ export class Test2Component implements OnInit {
   }
 
   restartTest() {
-    console.log("restarting");
     for(var i=0; i<9; i++) {
       this.hideNumbersFlag.pop();
       this.genNumberArray.pop();
     }
     this.expectedInput = 1;
-    this.result = "Doebal si to. haha";
+    this.result = "Your score: ";
 
     document.getElementById("results").style.display = "none";
     document.getElementById("countBar").className = "";            //change class for animation

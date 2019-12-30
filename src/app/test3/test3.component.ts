@@ -160,6 +160,9 @@ export class Test3Component implements OnInit {
     clearInterval(this.intervalTimer);
     document.getElementById("test").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
+    document.getElementById("frontWindow").style.display = "inline-block";        //hide front window
+    document.getElementById("frontText").style.display = "none";        //hide front window
+    document.getElementById("frontTime").style.display = "none";        //hide front window
   }
 
   restartTest() {

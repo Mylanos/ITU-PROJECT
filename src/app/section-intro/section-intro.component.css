@@ -1,6 +1,6 @@
 /***********************INTRO************************/
 #section-intro{
-    background-color: #1d1e22;
+    background-color: rgba(10, 16, 22, 0.96);
     width: 100%;
     height: 650px;
 }
@@ -25,13 +25,13 @@
 #section-intro .content #welcome-title{
     width: 400px;
     margin: 40px auto;
-    font-size: 18px;
     letter-spacing: 1px;
 }
 
 #section-intro .content #welcome-title h2{
     width: 100%;
     text-align: center;
+    font-size: 28px;
 }
 
 #section-intro .content #welcome-text{
@@ -47,6 +47,7 @@
 #section-intro .content #welcome-butt-box{
     margin: 70px auto;
     width: 200px;
+    font-size: 17px;
 }
 
 #section-intro .content #welcome-butt-box p{
@@ -74,7 +75,7 @@
         margin-top: 140px;
     }
     #section-intro .content #welcome-title{
-        font-size: 25px;
+        font-size: 28px;
         letter-spacing: 1px;
         width: 50%;
     }
