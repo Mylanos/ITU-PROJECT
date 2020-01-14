@@ -48,6 +48,8 @@ export class Test2Component implements OnInit {
         this.genNumberArray.push(genNumber);
       }
     } while(this.genNumberArray.length < 9);
+
+    document.getElementById("showRes").style.display = "none";
   }
 
   explClick() {
@@ -83,7 +85,6 @@ export class Test2Component implements OnInit {
   }
 
   startTest() {
-    console.log("starting test");
     document.getElementById("results").style.display = "none";            //hide results
     document.getElementById("countBar").className = "animate";            //change class to start animation
     document.getElementById("countDown").style.display = "inline-block";  //display countdown
@@ -115,7 +116,17 @@ export class Test2Component implements OnInit {
         this.expectedInput += 1;
       }
       else {
-        this.endTest(false);
+        this.testStartFlag = false;       //disable clicking
+
+        //show all numbers and color:red
+        for(var i=0; i<9; i++) {
+          this.hideNumbersFlag[i] = false;
+        }
+
+        var elem = document.getElementById("test").children;
+          elem[num-1].style.backgroundColor = 'red';
+
+        document.getElementById("showRes").style.display = "initial";
       }
     }
     if(this.expectedInput == 10) {
@@ -123,8 +134,12 @@ export class Test2Component implements OnInit {
     }
   }
 
+  showResults() {
+    document.getElementById("showRes").style.display = "none";
+    this.endTest(false);
+  }
+
   endTest(state: boolean) {
-    this.testStartFlag = false;       //disable clicking
     document.getElementById("test").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
     document.getElementById("frontWindow").style.display = "inline-block"; 
@@ -149,6 +164,12 @@ export class Test2Component implements OnInit {
     }
     this.expectedInput = 1;
     this.result = "Your score: ";
+
+    var elem = document.getElementById("test").children;
+
+    for(var i=0; i<9; i++) {
+          elem[i].style.backgroundColor = 'white';
+    }
 
     document.getElementById("results").style.display = "none";
     document.getElementById("countBar").className = "";            //change class for animation
