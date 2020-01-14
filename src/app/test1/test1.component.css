@@ -1,64 +1,84 @@
 .testWindow {
     text-align: center;
+    margin: auto;
     margin-top: 200px;
     margin-bottom: 100px;
-    height: 100%;
+    height: 80%;
     width: 100%;
-    overflow: auto;
 }
 .testWindow h2{
     text-align: center;
     margin-bottom: 50px;
 }
-
-#frontWindow {
-    color: black;
-    position: absolute;
-    z-index: 1;
-    width: 50vh;
-    height: 30h;
-    background-color: white;
-    display: inline-block;
+#frontWindow h3{
     text-align: center;
     margin: auto;
-    margin-left: 210px;
-    margin-top: 300px;
-    padding-bottom: 20px;
-    border-radius: 10px;
+    margin-top: 20px;
+}
+#frontWindow {
+    color: black;
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    height: 30h;
+    text-align: center;
+    margin: auto;
+}
+#frontWindow .content{
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    background-color: #eee;
+    margin-top: 130px;
+    border-radius: 2px;
+    padding-bottom: 16px;
 }
 #frontWindow #btn{
-    margin-top: 15px;
-    padding: 2px 15px;
-    font-size: 17px;
+    color: #49c9e3;
+    background-color: #eee;
+    margin-top: 60px;
+    padding: 6px 24px;
+    font-size: 19px;
     border-radius: 2px;
     border-width: 2px;
+    border: solid;
+    border-width: 2px;
+    transition: 0.2s;
 }
 #frontWindow #btn:hover{
+    color: white;
     background-color: #49c9e3;
-    border-color:  #49c9e3;
+    border-color: #49c9e3;
 }
+
 #frontWindow p{
     text-align: center;
     margin: 20px 10px;
     font-size: 17px;
 }
 
-#frontTime {
+.content #frontTime{
+    margin-top: 50px;
+    font-size: 50px;
     display: none;
 }
 
 #test {
-    width: 100vh;
-    height: 78vh;
+    width: 100%;
+    height: 97vh;
     display: inline-block;
-    background-color: rgba(32, 54, 75, 0.96);
-    border-radius: 10px;
+    background-color: rgba(155, 161, 167, 0.96);
+    border-radius: 2px;
 }
 #test #results_box{
     font-size: 20px;
     background-color:white;
-    height: 18vh;
-    width: 22vh;
+    height: 20vh;
+    width: 55vh;
     text-align: center;
     display: none;
     margin: auto;
@@ -78,30 +98,42 @@
     text-align: center;
     display: none;
 }
+#display #numbers{
+    transition: 0.4s;
+}
 #display p{
     text-align: center;
 }
 #result {
-    width: 100%;
+    width: 300px;
     text-align: center;
     margin: auto;
     border-radius: 10px;
     background-color: white;
     padding: 5px 0px;
 }
-#test #results_box p{
+#test #results_box p, input{
     text-align: center;
     margin: auto;
+}
+#inputtxt{
+    font-size: 25px;
+}
+#numbers2{
+    margin-top: 10px;
+    font-size: 50px;
+    letter-spacing: 6px;
 }
 #test1_reload{
     display: none;
     text-align: center;
 }
+
 #btn_reload{
     text-align: center;
     margin: auto;
-    margin-top: 15px;
-    padding: 2px 15px;
+    margin-top: 70px;
+    padding: 8px 30px;
     font-size: 17px;
     border-radius: 2px;
     border-width: 2px;
@@ -116,61 +148,146 @@
     font-size: 17px;
     border-width: 2px;
     border-radius: 2px;
+}
+#keyboard {
+    width: 410px;
+    height: 550px;
+    display: none;
+    background: white;
+    border-radius: 1px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 6vh;
+    
+}
+#keyboard .content{
+    padding-top: 3vh;
+    width: 360px;
+    height: 370px;
+    text-align: center;
+    margin: auto;
+}
+.num:nth-child(13),.num:nth-child(14){
+    width: 168px;
+    height: 60px;
+}
+.num{
+    text-align: center;
+    font-size: 27px;
+    width: 110px;
+    height: 90px;
+    margin: 3px;
+    float: left;
+    border: solid;
+    border-width: 2px;
+}
+.btn1{
+    color: #49c9e3;
+    background-color: white;
+}
+.btn1:hover{
+    color: white;
+    background-color: #49c9e3;
+    border-color: #49c9e3;
+}
+.btndel:hover{
+    color: white;
+    background-color: rgba(226, 99, 99, 0.96);
+    border-color: rgba(226, 99, 99, 0.96);
+}
+
+#progress {
+    margin: 10px;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    display: none;
+
+  }
+
+/*radio buttons*/
+#test1radioButtons{
+    z-index: 2;
+    width: 10%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    border-radius: 2px;
+    padding-bottom: 10px;
+}
+#test1radioButtons .column{
+    width: auto;
+    margin-right: 10px;
+}
+.container {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+  
+.container input {
+    position: absolute;
+    margin: auto;
+    opacity: 0;
     cursor: pointer;
 }
 
-#test #results_box #nextRound:hover{
-    padding: 2px 15px;
-    background-color: #49c9e3;
-    border-color:  #49c9e3;
-    font-size: 17px;
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(184, 192, 201, 0.96);;
+    border-width: 1px;
+    border-radius: 30%;
 }
 
-#keyboard {
-    width: 240px;
-    display: block;
-    background-color: white;
-    text-align: center;
-    margin: auto;
-    margin-top: 12vh;
-    border-radius: 10px;
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #49c9e3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
     display: none;
 }
 
-.num, .empty {
-    text-align: center;
-    background-color: white;
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    margin: 15px;
-    float: left;
-    border-radius: 50%;
-}
-.num:focus, .empty:focus {
-    outline: 0;
+.container input:checked ~ .checkmark:after {
+display: block;
 }
 
-.num:hover{
-    background-color: #49c9e3;
-    transition: 0.4s;
-    font-weight: bolder;
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 30%;
+    background: white;
 }
-.num {
-    cursor: pointer;
-}
-.empty {
-    border-style: none;
-}
+/*radio buttons*/
+
 
 @media only screen and (max-width: 800px){
     #test {
-        width: 60vh;
+        width: 100%;
+        height: 90vh;
     }
     #frontWindow{
-        width: 40vh;
+        width: 80%;
+        margin: auto;
         margin-top: 180px;
-        margin-left: 80px;
+    }
+    #testWindow{
+        margin-top: 50px;
     }
 
 }
