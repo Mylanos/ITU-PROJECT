@@ -32,7 +32,7 @@
                       
                     </div>
 
-                    <button class="btn btn-outline-info" id="btn" (click)="explClick()" >I UNDERSTAND</button>
+                    <button type="button" class="btn btn-outline-info" id="btn" (click)="explClick()" >I UNDERSTAND</button>
             </div>
         </div>
 
@@ -65,20 +65,20 @@
 
             <div id="keyboard">
                 <div class="content">
-                <button class="num btn btn-outline-info" (click)="numberClick(1)">1</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(2)">2</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(3)">3</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(4)">4</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(5)">5</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(6)">6</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(7)">7</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(8)">8</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(9)">9</button>
-                <button class="num btn btn-outline-danger" (click)="deleteClick()">DELETE</button>
-                <button class="num btn btn-outline-info" (click)="numberClick(0)">0</button>
-                <button class="num btn btn-outline-warning" id="nextRound" nextRound (click)="restartTest()">RESTART</button>
-                <button class="num btn btn-outline-success" (click)="endTest()">FINISH</button>
-                <button class="num btn btn-outline-dark" nextRound (click)="nextRound()">NEXT ROUND</button>
+                <button img="./" type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(1)">1</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(2)">2</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(3)">3</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(4)">4</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(5)">5</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(6)">6</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(7)">7</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(8)">8</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(9)">9</button>
+                <button type="button" class="num btndel btn btn-outline-danger" (click)="deleteClick()">DELETE</button>
+                <button type="button" class="num btn1 btn btn-outline-info" (click)="numberClick(0)">0</button>
+                <button type="button" class="num btnrestart btn btn-outline-warning" id="nextRound" nextRound (click)="restartTest()">RESTART</button>
+                <button type="button" class="num btnfin btn btn-outline-success" (click)="endTest()">FINISH</button>
+                <button type="button" class="num btnnext btn btn-outline-dark" nextRound (click)="nextRound()">NEXT ROUND</button>
                 </div>
             </div>
         </div>

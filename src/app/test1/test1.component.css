@@ -3,7 +3,7 @@
     margin: auto;
     margin-top: 200px;
     margin-bottom: 100px;
-    height: 100%;
+    height: 80%;
     width: 100%;
 }
 .testWindow h2{
@@ -19,7 +19,7 @@
     color: black;
     position: relative;
     z-index: 1;
-    width: 80vh;
+    width: 60%;
     height: 30h;
     text-align: center;
     margin: auto;
@@ -27,22 +27,32 @@
 #frontWindow .content{
     position: absolute;
     width: 100%;
-    height: 400px;
+    height: 450px;
     display: block;
     text-align: center;
     margin: auto;
     text-transform: uppercase;
     background-color: #eee;
-    margin-top: 100px;
+    margin-top: 130px;
     border-radius: 2px;
     padding-bottom: 16px;
 }
 #frontWindow #btn{
-    margin-top: 150px;
+    color: #49c9e3;
+    background-color: #eee;
+    margin-top: 60px;
     padding: 6px 24px;
-    font-size: 17px;
+    font-size: 19px;
     border-radius: 2px;
     border-width: 2px;
+    border: solid;
+    border-width: 2px;
+    transition: 0.2s;
+}
+#frontWindow #btn:hover{
+    color: white;
+    background-color: #49c9e3;
+    border-color: #49c9e3;
 }
 
 #frontWindow p{
@@ -51,7 +61,6 @@
     font-size: 17px;
 }
 
-
 .content #frontTime{
     margin-top: 50px;
     font-size: 50px;
@@ -59,8 +68,8 @@
 }
 
 #test {
-    width: 150vh;
-    height: 90vh;
+    width: 100%;
+    height: 93vh;
     display: inline-block;
     background-color: rgba(155, 161, 167, 0.96);
     border-radius: 2px;
@@ -153,8 +162,8 @@
     
 }
 #keyboard .content{
-    padding-top: 4vh;
-    width: 330px;
+    padding-top: 3vh;
+    width: 360px;
     height: 370px;
     text-align: center;
     margin: auto;
@@ -163,18 +172,31 @@
     width: 155px;
     height: 60px;
 }
-.num, .empty {
+.num{
     text-align: center;
-    font-size: 24px;
-    width: 100px;
+    font-size: 27px;
+    width: 110px;
     height: 90px;
-    margin: 5px;
+    margin: 3px;
     float: left;
+    border: solid;
+    border-width: 2px;
+}
+.btn1{
+    color: #49c9e3;
+    background-color: white;
+}
+.btn1:hover{
+    color: white;
+    background-color: #49c9e3;
+    border-color: #49c9e3;
+}
+.btndel:hover{
+    color: white;
+    background-color: rgba(226, 99, 99, 0.96);
+    border-color: rgba(226, 99, 99, 0.96);
 }
 
-.empty {
-    border-style: none;
-}
 #progress {
     margin: 10px;
     width: 600px;
@@ -187,22 +209,18 @@
 /*radio buttons*/
 #test1radioButtons{
     z-index: 2;
-    width: 100%;
-    position: absolute;
+    width: 10%;
+    position: relative;
     margin: auto;
     text-align: center;
-    left: auto;
-    margin-left: auto;
     border-radius: 2px;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
 }
 #test1radioButtons .column{
-    display: inline-block;
     width: auto;
     margin-right: 10px;
 }
 .container {
-    display: block;
     position: relative;
     padding-left: 30px;
     margin-bottom: 12px;
@@ -260,13 +278,16 @@ display: block;
 
 @media only screen and (max-width: 800px){
     #test {
-        width: 80vh;
-        height: 110vh;
+        width: 100%;
+        height: 90vh;
     }
     #frontWindow{
-        width: 50vh;
+        width: 80%;
         margin: auto;
         margin-top: 180px;
+    }
+    #testWindow{
+        margin-top: 50px;
     }
 
 }
