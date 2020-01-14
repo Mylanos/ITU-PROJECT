@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'itu-first'`, () => {
+  it(`should have as title 'itu-pepega'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('itu-first');
+    expect(app.title).toEqual('itu-pepega');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('itu-first app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('itu-pepega app is running!');
   });
 });

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "itu-first": {
+    "itu-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/itu-first",
+            "outputPath": "dist/itu-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "itu-first:build"
+            "browserTarget": "itu-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "itu-first:build:production"
+              "browserTarget": "itu-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "itu-first:build"
+            "browserTarget": "itu-project:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "itu-first:serve"
+            "devServerTarget": "itu-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "itu-first:serve:production"
+              "devServerTarget": "itu-project:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "itu-first"
+  "defaultProject": "itu-project"
 }

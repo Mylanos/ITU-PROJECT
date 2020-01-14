@@ -1,0 +1,41 @@
+<div class="testWindow">
+        <h2>NUMBERS SEQUENCE TEST</h2>
+        <div id="frontWindow">
+            <p id="frontText">
+                    This test generates numbers in random order, your goal is to remember them, from the least upwards.  Once the timer runs out, click on the buttons in the guessed order.
+            </p>
+            <p id="frontTime">
+                {{getTimeCounter()}}
+            </p>
+            <button id="btn" (click)="explClick()" >I understand</button>
+
+            <div id="results">
+                    <p>{{getResult()}}</p>
+                    <button (click)="restartTest()">Play again</button>
+            </div>
+        </div>
+    
+        <div id="testBlock">
+            <div id="test">
+                <button id="matrixNumber" (click)="numberClick(1)">{{getNumber(1)}}</button>
+                <button id="matrixNumber" (click)="numberClick(2)">{{getNumber(2)}}</button>
+                <button id="matrixNumber" (click)="numberClick(3)">{{getNumber(3)}}</button>
+                <button id="matrixNumber" (click)="numberClick(4)">{{getNumber(4)}}</button>
+                <button id="matrixNumber" (click)="numberClick(5)">{{getNumber(5)}}</button>
+                <button id="matrixNumber" (click)="numberClick(6)">{{getNumber(6)}}</button>
+                <button id="matrixNumber" (click)="numberClick(7)">{{getNumber(7)}}</button>
+                <button id="matrixNumber" (click)="numberClick(8)">{{getNumber(8)}}</button>
+                <button id="matrixNumber" (click)="numberClick(9)">{{getNumber(9)}}</button>
+            </div>
+
+            <div id="countDown">
+                <div id="countBar">
+                </div>
+            </div>
+
+            <div id="showResBtn">
+                <button id="showRes" (click)="showResults()" >Show results</button>
+            </div>
+
+        </div>
+    </div>

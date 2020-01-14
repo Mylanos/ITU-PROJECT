@@ -1,0 +1,127 @@
+/***********************TESTS************************/
+#section-tests{
+    background-color: white;
+}
+#section-tests .content{
+    display: block;
+    padding: 15px;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+#section-tests .content .all-tests{
+    position: relative;
+    width: auto;
+}
+
+#section-tests .content .tests-headline-box{
+    margin: 20px auto 50px auto;
+    width: 100%;
+}
+
+#section-tests .content .tests-headline-box h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+#section-tests .content .column{
+    border: solid;
+    border-width: 2px;
+    width: 250px;
+    height: 100%;
+    margin: 20px auto;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+#section-tests .content .column a{
+    color: black;
+}
+
+#section-tests .content .column p{
+    text-align: center;
+    border: solid;
+    border-width: 2px;
+    width: 100%;
+    padding-top: 2px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#section-tests .content .column p:hover{
+    border-color: #49c9e3;
+    color: #49c9e3;
+}
+
+#section-tests .content .column h3{
+    text-align: center;
+    font-size: 23px;
+    margin: 10px auto;
+}
+
+#section-tests .content .column #test1-pic{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 32px;
+}
+
+#section-tests .content .column #test2-pic{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 3px;
+    margin-top: 1px;
+}
+#section-tests .content .column #test3-pic{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 28px;
+}
+
+@media only screen and (min-width: 800px) {
+    #section-tests{
+        width: 100%;
+        overflow: hidden;
+    }
+    #section-tests .content{
+        margin-bottom: 80px;
+        height: 100%;
+    }
+    #section-tests .tests-headline{
+        margin-top: 40px;
+    }
+    #section-tests .content .all-tests{
+        width: 100%;
+        text-align: center;
+    }
+    #section-tests .content .column{
+        display: inline-block;
+        margin: 10px 20px;
+        height: 350px;
+    }
+    #section-tests .content .all-tests{
+        margin-top: 50px;
+    }
+    #section-tests .content .column #test1-pic{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 60px;
+        margin-top: 70px;
+    }
+    
+    #section-tests .content .column #test2-pic{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 33px;
+        margin-top: 1px;
+    }
+    #section-tests .content .column #test3-pic{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 32px;
+    }
+
+}
+/***********************TESTS************************/

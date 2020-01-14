@@ -1,0 +1,30 @@
+<header (scroll)="scrollFunction()" id="header">
+    <div ng-controller="myCtrl" (window:resize)="closeNav()" class="content">
+    
+        
+        <div id="header_logo" class="column logo">
+            <a routerLink="/domain"><img id="main-logo" src="../assets/img/brain.png" alt="Conference logo"></a>
+        </div>
+        
+        <div class="column" id="horizontalLine">
+        </div>
+        
+        <div class="column" id="web_title">
+            <a routerLink="/domain"><h1>SHORT MEMORY</h1></a>
+        </div>
+    
+        <div id="navigation_menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+            <div id="overlay-content">
+                <ul>
+                    <li><a (click)="closeNav()"class="navLink" href="#section-tests" target="_self">Tests</a></li>
+                    <li><a class="navLink" routerLink="/stats">Stats</a></li>
+                    <li><a (click)="closeNav()" class="navLink" routerLink="/signin">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="navigation_block" class="column nav_button_block">
+            <span id="nav_button" (click)="openNav()">&#9776;</span>
+        </div>
+        </div>
+</header>
