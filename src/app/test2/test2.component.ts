@@ -123,8 +123,7 @@ export class Test2Component implements OnInit {
           this.hideNumbersFlag[i] = false;
         }
 
-        var elem = document.getElementById("test").children;
-          elem[num-1].style.backgroundColor = 'red';
+        document.getElementById('matrixNumber')[num-1].style.color = 'red';
 
         document.getElementById("showRes").style.display = "initial";
       }
@@ -165,10 +164,8 @@ export class Test2Component implements OnInit {
     this.expectedInput = 1;
     this.result = "Your score: ";
 
-    var elem = document.getElementById("test").children;
-
     for(var i=0; i<9; i++) {
-          elem[i].style.backgroundColor = 'white';
+          document.getElementById('matrixNumber')[i].style.color = 'white';
     }
 
     document.getElementById("results").style.display = "none";
