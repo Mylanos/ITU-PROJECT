@@ -239,5 +239,4 @@ export class Test1Component {
   reloadPage(){
     location.reload();
   }
-
 }

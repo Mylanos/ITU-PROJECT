@@ -20,7 +20,7 @@ export class Test2Component implements OnInit {
   private hideNumbersFlag: boolean [] = new Array();
   private testStartFlag = false;
   private expectedInput = 1;
-  private result = "Your score: ";
+  private result = "Your score: (tu môže byť aj nejaký fancy graf že ako ti to išlo)";
 
   ngOnInit() {
     //vyplní sa 9 indexov flag array
@@ -123,7 +123,9 @@ export class Test2Component implements OnInit {
           this.hideNumbersFlag[i] = false;
         }
 
-        document.getElementById('matrixNumber')[num-1].style.color = 'red';
+        var x = document.getElementById("test").querySelectorAll("button");  
+        x[num-1].style.backgroundColor = "#E93E3E";
+        x[num-1].style.borderColor = "#E93E3E";
 
         document.getElementById("showRes").style.display = "initial";
       }
@@ -164,8 +166,11 @@ export class Test2Component implements OnInit {
     this.expectedInput = 1;
     this.result = "Your score: ";
 
+    var x = document.getElementById("test").querySelectorAll("button");  
+    
     for(var i=0; i<9; i++) {
-          document.getElementById('matrixNumber')[i].style.color = 'white';
+      x[i].style.backgroundColor = "white";
+      x[i].style.borderColor = "white";
     }
 
     document.getElementById("results").style.display = "none";

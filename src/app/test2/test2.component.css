@@ -91,9 +91,7 @@
     margin:auto;
     width: 30vw;
     height: 3vh;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+    border-style: none;
     margin-top: 4vh;
 }
 
@@ -132,6 +130,27 @@
     text-align: center;
     margin-top: -50px;
     margin-bottom: 20px;
+}
+
+#showRes #showResBtn{
+    margin-top: 15px;
+    padding: 2px 15px;
+    font-size: 17px;
+    border-radius: 2px;
+    border-width: 2px;
+    font-size: 18px;
+}
+
+#showRes #showResBtn:hover{
+    background-color: #49c9e3;
+    border-color:  #49c9e3;
+}
+
+.warning {
+    color: red;
+    font-size: 36px;
+    text-align: center;
+    margin: auto;
 }
 
 /*adddded*/
