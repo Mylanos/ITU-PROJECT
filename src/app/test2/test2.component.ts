@@ -179,7 +179,19 @@ export class Test2Component implements OnInit {
     xhttp.send();
     var obj = JSON.parse(xhttp.responseText);
 
+    CanvasJS.addColorSet("customColorSet1",
+      [//colorSet Array
+        "#75abd1",
+        "#085c96",
+        "#588aad",
+        "#447394",
+        "#0b74bd",
+        "#305f80",
+        "#1b4d70",
+     ]); 
+
     let chart = new CanvasJS.Chart("chartContainer", {
+      colorSet:  "customColorSet1",
       animationEnabled: true,
       exportEnabled: false,
       title: {

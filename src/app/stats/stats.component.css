@@ -1,0 +1,19 @@
+.window {
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
+._button{
+    text-align: center;
+    height: 50px;
+    color: black;
+    font-size: 25px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+._button:hover{
+    background-color:  #49c9e3;
+    border-color: #49c9e3;
+    transition: 0.2s;
+}
