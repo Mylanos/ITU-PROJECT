@@ -16,11 +16,15 @@ export class SigninComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.getUsers();
+    
   }
 
-  signinUser() {
-    console.log('hahhahahah');
+  signinUser() {    
+    console.log('user signin');
+  }
+
+  loginUser() {
+    console.log('user login');
   }
 
   getUsers(): void {

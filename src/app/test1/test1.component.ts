@@ -1,4 +1,3 @@
-import { Stats1Service } from './../stats1.service';
 /*
 Test pozostáva z 5 po sebe idúcich testov,
 pri čom prvé kolo si užívateľ musí zapamätať 4 číslice,
@@ -20,15 +19,6 @@ declare var $: any;
 
 export class Test1Component{
   
-  ngAfterViewInit(){
-    console.log('zavolalo ma toooo');
-    this.statsService.initResults();
-  }
-
-  constructor(
-    public statsService: Stats1Service
-  ){}
-
   private  startLength = 4;         //Number of testing elements
   private finalLength = 7;
   private points = 0;
@@ -213,7 +203,6 @@ export class Test1Component{
         this.points += 1;
       }
     }
-    this.statsService.addResult(this.points);
   }
 
   restartTest(){
@@ -221,8 +210,7 @@ export class Test1Component{
   }
 
   endTest() {
-    var results = this.statsService.getResults();
-    console.log(results);
+
     this.calcScore();
 
     var xhttp = new XMLHttpRequest();
