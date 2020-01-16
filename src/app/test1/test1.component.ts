@@ -1,3 +1,4 @@
+import { Stats1Service } from './../stats1.service';
 /*
 Test pozostáva z 5 po sebe idúcich testov,
 pri čom prvé kolo si užívateľ musí zapamätať 4 číslice,
@@ -7,10 +8,8 @@ sa rovná počtu uhádnutých číslic na spávnom indexe
 za toto kolo 3 body, pretože správne zadal 3 číslice.
 */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { I18nSelectPipe } from '@angular/common';
-import { range } from 'rxjs';
-import { start } from 'repl';
 declare var $: any;
 
 @Component({
@@ -19,7 +18,17 @@ declare var $: any;
   styleUrls: ['./test1.component.css']
 })
 
-export class Test1Component {
+export class Test1Component{
+  
+  ngAfterViewInit(){
+    console.log('zavolalo ma toooo');
+    this.statsService.initResults();
+  }
+
+  constructor(
+    public statsService: Stats1Service
+  ){}
+
   private  startLength = 4;         //Number of testing elements
   private finalLength = 7;
   private points = 0;
@@ -33,7 +42,10 @@ export class Test1Component {
   private inputNumbers: number [] = new Array();
   private inputNumbersLength = 0;
   private fullTestNumbers: number [] = new Array();
-  private fullInputNumbers: number [] = new Array();
+  private fullInputNumbers: number [] = new Array();  
+
+
+
 
   initDifficulty(difficulty: number){
     if(difficulty == 1){
@@ -201,6 +213,7 @@ export class Test1Component {
         this.points += 1;
       }
     }
+    this.statsService.addResult(this.points);
   }
 
   restartTest(){
@@ -208,7 +221,8 @@ export class Test1Component {
   }
 
   endTest() {
-    console.log()
+    var results = this.statsService.getResults();
+    console.log(results);
     this.calcScore();
     document.getElementById("keyboard").style.display = "none";
     document.getElementById("input").style.display = "none";
