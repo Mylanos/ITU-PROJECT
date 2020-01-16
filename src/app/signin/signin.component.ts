@@ -16,9 +16,7 @@ export class SigninComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    console.log('hue hue hue');
     this.getUsers();
-    console.log(this.users);
   }
 
   signinUser() {

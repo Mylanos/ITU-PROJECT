@@ -195,7 +195,6 @@ export class Test1Component {
     for(var n = 4; n <= this.inputNumbersLength; n++){
       inputedValues = inputedValues + n;
     }
-    console.log("hahaha ", inputedValues);
     for(var i=0; i<inputedValues; i++){      //4+5+6+7+8
       if(this.fullInputNumbers[i] == this.fullTestNumbers[i]) {
         this.points += 1;

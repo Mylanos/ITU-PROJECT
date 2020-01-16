@@ -13,6 +13,8 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './test2.component.html',
   styleUrls: ['./test2.component.css']
 })
+
+
 export class Test2Component implements OnInit {
 
   private genNumberArray: number [] = new Array();
@@ -23,6 +25,7 @@ export class Test2Component implements OnInit {
   private result = "Your score: (tu môže byť aj nejaký fancy graf že ako ti to išlo)";
 
   ngOnInit() {
+
     //vyplní sa 9 indexov flag array
     for(var f=0; f<9; f++) {
       this.hideNumbersFlag.push(false);
@@ -52,6 +55,9 @@ export class Test2Component implements OnInit {
     document.getElementById("showRes").style.display = "none";
   }
 
+
+
+
   explClick() {
     //hide guide
     document.getElementById("btn").style.display = "none";
@@ -59,6 +65,9 @@ export class Test2Component implements OnInit {
     document.getElementById("frontTime").style.display = "initial";
     this.startCountdown();
   }
+
+
+
 
   startCountdown() {
     let intervalId = setInterval(() => {
@@ -70,9 +79,15 @@ export class Test2Component implements OnInit {
     }, 1000)
   }
 
+
+
+
   getTimeCounter() {
     return this.timeCounter;
   }
+
+
+
 
   //called from html
   getNumber(position: number) {
@@ -83,6 +98,10 @@ export class Test2Component implements OnInit {
       return this.genNumberArray[position - 1]; //indexing from 0
     }
   }
+
+
+
+
 
   startTest() {
     document.getElementById("results").style.display = "none";            //hide results
@@ -106,6 +125,9 @@ export class Test2Component implements OnInit {
       }
     }, 1000)
   }
+
+
+
 
   numberClick(num: number) {
     //if test started
@@ -135,12 +157,25 @@ export class Test2Component implements OnInit {
     }
   }
 
+
   showResults() {
     document.getElementById("showRes").style.display = "none";
     this.endTest(false);
   }
 
+
   endTest(state: boolean) {
+
+
+    //tu skúsime XmlHttpRequest-ovať
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/script.php", false);
+    xhttp.setRequestHeader("TEST2", (this.expectedInput-1).toString());
+    xhttp.send();
+
+    console.log(xhttp.responseText);
+
+
     document.getElementById("test").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
     document.getElementById("frontWindow").style.display = "inline-block"; 
@@ -154,9 +189,15 @@ export class Test2Component implements OnInit {
     }
   }
 
+
+
+
   getResult() {
     return this.result;
   }
+
+
+
 
   restartTest() {
     for(var i=0; i<9; i++) {
