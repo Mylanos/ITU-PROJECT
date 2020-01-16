@@ -2,28 +2,37 @@
 <section id="section-contact">
     <div class="content">
         <hr>
-        <h2>SIGN UP</h2>
-        <div class="column inputContact">
-            <form (submit)="signinUser()" method="POST" action="http://samots.mooo.info:8008/signin.php">
-                <div class="column1">
-                    <p>firstname:</p><input placeholder="name" type="text" name="first_name">
+
+        <div class="row">
+
+            <div class="column">
+                <h2>LOG IN</h2>
+                <div class="column inputContact">
+                    <form (submit)="loginUser()" method="POST" action="http://localhost:8080/login.php">
+                        <p>username:</p><input placeholder="login" type="text" name="username" required>
+                        <p>password:</p><input placeholder="password" type="password" name="password" required>
+                        <div class="_button">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
                 </div>
-                <div class="column1">
-                    <p>surname:</p><input placeholder="surname" type="text" name="surname">
+            </div>
+
+
+            <div class="column">
+                <h2>SIGN UP</h2>
+                <div class="column inputContact">
+                    <form (submit)="signinUser()" method="POST" action="http://localhost:8080/signin.php">
+                        <p>username:</p><input placeholder="login" type="text" name="username" required>
+                        <p>email:</p><input placeholder="mail@mail.com" type="text" name="email" required>
+                        <p>password:</p><input placeholder="password" type="password" name="password " required>
+                        <div class="_button">
+                           <input type="submit" value="Submit">
+                        </div>
+                    </form>
                 </div>
-                <p>username:</p><input placeholder="login" type="text" name="username" required>
-                <p>email</p><input placeholder="mail@mail.com" type="text" name="email" required>
-                <p>password</p><input placeholder="password" type="password" name="password_1" required>
-                <div class="button-content">
-                    <div class="_button">
-                        <input (click)="signinUser()" placeholder="SIGN IN" type="submit">
-                    </div>
-                </div>
-                <div class="log-in_class">
-                    <p>Already signed up?<a routerLink="/login">Log in.</a></p>
-                </div>
-            </form>
-        </div>
+            </div>
+          </div>
         <hr>
     </div>
 </section>

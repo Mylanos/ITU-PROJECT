@@ -1,61 +1,9 @@
-#section-contact .content{
-    margin-top: 3cm;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    margin-bottom: 170px;
+.window {
+    padding-top: 150px;
+    padding-bottom: 200px;
 }
-#section-contact hr{
-    margin: 1cm 2cm;
-}
-#section-contact h2{
-    color: black;
-    width: 50%;
-    text-align: center;  
-    margin: auto;
-    padding: 10px;
-    font-size: 29px;
-}
-#section-contact .inputContact{
-    width: 60%;
-    margin: auto;
-    text-align: center;
-}
-#section-contact .content input{
-    width: 98%;
-    height: 40px;
-    padding: 12px 20px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 18px 10px;
-}
-#section-contact p{
-    margin-bottom: -10px;
-    margin-left: 10px;
-}
-#section-contact .column1{
-    float: left;
-    width: 49%;
-    margin: auto;
-    margin-left: 4px;
-}
-#section-contact .content textarea{
-    width: 80%;
-    height: 200px;
-    padding: 12px 20px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    resize: none;
-    margin: 20px 10px;
-}
-#section-contact ._button{
-    text-align: center;
-    width: 30%;
-    margin: auto;
-}
-#section-contact ._button input{
+
+._button{
     text-align: center;
     height: 50px;
     color: black;
@@ -64,21 +12,8 @@
     border-width: 1px;
     border-color: black;
 }
-#section-contact ._button input:hover{
+._button:hover{
     background-color:  #49c9e3;
     border-color: #49c9e3;
     transition: 0.2s;
-}
-.log-in_class p{
-    text-align: center;
-    margin: auto;
-}
-@media only screen and (max-width: 800px){
-    #section-contact{
-        height: 135vw;
-    }
-   #section-contact .inputContact{
-        width: 90vw;
-   }
-
 }

@@ -1,3 +1,11 @@
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 50%;
+}
+
 #section-contact .content{
     margin-top: 3cm;
     width: 100%;

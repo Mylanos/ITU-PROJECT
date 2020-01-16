@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-
-import { User } from './user';
-import { UserService } from './user.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-signin',
@@ -11,31 +8,25 @@ import { UserService } from './user.service';
 })
 
 export class SigninComponent implements OnInit {
-  users: User[];
-  error = '';
-  constructor(private userService: UserService) {}
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    console.log('hue hue hue');
-    this.getUsers();
-    console.log(this.users);
-  }
-
-  signinUser() {
-    console.log('hahhahahah');
-  }
-
-  getUsers(): void {
-    
-  this.userService.getAll().subscribe(
-    (res: User[]) => {
-      this.users = res;
-    },
-    (err) => {
-      this.error = err;
+    var logged = localStorage.getItem("logged");
+    if(logged == "true") {
+      this.router.navigate(['/profile']);
     }
-  );
-  
-}
+  }
 
+  signinUser() {    
+    console.log('user signin');
+    localStorage.setItem("logged", "true");
+    this.router.navigate(['/profile']);
+  }
+
+  loginUser() {
+    console.log('user login');
+    localStorage.setItem("logged", "true");
+    this.router.navigate(['/profile']);
+  }
 }
