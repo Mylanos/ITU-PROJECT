@@ -158,6 +158,14 @@ export class Test3Component implements OnInit {
 
   endTest() {
     clearInterval(this.intervalTimer);
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/script.php", false);
+    xhttp.setRequestHeader("TEST3", (this.pointScore).toString());
+    xhttp.send();
+
+    console.log('TEST 3 ', xhttp.responseText);
+
     document.getElementById("test").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
     document.getElementById("frontWindow").style.display = "inline-block";        //hide front window
