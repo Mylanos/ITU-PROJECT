@@ -7,6 +7,7 @@ poradí od 1 po 9.
 */
 
 import { Component, OnInit, Input } from '@angular/core';
+import * as CanvasJS from './canvasjs.min';
 
 @Component({
   selector: 'app-test2',
@@ -172,9 +173,35 @@ export class Test2Component implements OnInit {
     xhttp.open("GET", "http://localhost:8080/script.php", false);
     xhttp.setRequestHeader("TEST2", (this.expectedInput-1).toString());
     xhttp.send();
-
     console.log(xhttp.responseText);
 
+    xhttp.open("GET", "http://localhost:8080/test2.json", false);
+    xhttp.send();
+    var obj = JSON.parse(xhttp.responseText);
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      exportEnabled: false,
+      title: {
+        text: "Basic Column Chart in Angular"
+      },
+      data: [{
+        type: "column",
+        dataPoints: [
+          { y: obj[0]['score1'], label: "1" },
+          { y: obj[0]['score2'], label: "2" },
+          { y: obj[0]['score3'], label: "3" },
+          { y: obj[0]['score4'], label: "4" },
+          { y: obj[0]['score5'], label: "5" },
+          { y: obj[0]['score6'], label: "6" },
+          { y: obj[0]['score7'], label: "7" },
+          { y: obj[0]['score8'], label: "8" },
+          { y: obj[0]['score9'], label: "9" }
+        ]
+      }]
+    });
+      
+    chart.render();
 
     document.getElementById("test").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
