@@ -78,6 +78,7 @@ export class Test3Component implements OnInit {
   }
 
   startTest() {
+    document.getElementById("testContent").style.display = "block";
     document.getElementById("frontWindow").style.display = "none";        //hide front window
     document.getElementById("test").style.display = "inline-block";       //display test
 
@@ -158,7 +159,15 @@ export class Test3Component implements OnInit {
 
   endTest() {
     clearInterval(this.intervalTimer);
-    document.getElementById("test").style.display = "none";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/script.php", false);
+    xhttp.setRequestHeader("TEST3", (this.pointScore).toString());
+    xhttp.send();
+
+    console.log('TEST 3 ', xhttp.responseText);
+
+    document.getElementById("testContent").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
     document.getElementById("frontWindow").style.display = "inline-block";        //hide front window
     document.getElementById("frontText").style.display = "none";        //hide front window

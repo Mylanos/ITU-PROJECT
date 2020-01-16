@@ -57,8 +57,14 @@
             <div id="result">
                 <p class="input_class">{{getResult()}}</p>
             </div>
+            <div id="results">
+                <div class="chartWrapper">
+                        <div id="chartContainer">
+                        </div>
+                    </div>
+                </div>
             <div id="test1_reload">
-                    <button class="btn btn-outline-warning" id="btn_reload" nextRound (click)="restartTest()">RESTART</button>
+                    <button class="btn" id="btn_reload" nextRound (click)="restartTest()">RESTART</button>
             </div>
 
         </div>

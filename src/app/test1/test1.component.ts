@@ -10,6 +10,7 @@ za toto kolo 3 body, pretože správne zadal 3 číslice.
 
 import { Component, OnInit, HostListener } from '@angular/core';
 import { I18nSelectPipe } from '@angular/common';
+import * as CanvasJS from '../canvasjs.min';
 declare var $: any;
 
 @Component({
@@ -224,11 +225,57 @@ export class Test1Component{
     var results = this.statsService.getResults();
     console.log(results);
     this.calcScore();
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/script.php", false);
+    xhttp.setRequestHeader("TEST1", (this.points).toString());
+    xhttp.send();
+  
+    console.log('TEST 1 ', xhttp.responseText);
+
+    xhttp.open("GET", "http://localhost:8080/test1.json", false);
+    xhttp.send();
+    var obj = JSON.parse(xhttp.responseText);
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      exportEnabled: false,
+      zoomEnabled: true,
+      backgroundColor: "#eee",
+      title: {
+        text: "Average scores"
+      },
+      data: [{
+        type: "column",
+        horizontalAlign: "center",
+        verticalAlign: "center",
+        dataPoints: [
+          { y: obj[0]['score1'], label: "1" },
+          { y: obj[0]['score2'], label: "2" },
+          { y: obj[0]['score3'], label: "3" },
+          { y: obj[0]['score4'], label: "4" },
+          { y: obj[0]['score5'], label: "5" },
+          { y: obj[0]['score6'], label: "6" },
+          { y: obj[0]['score7'], label: "7" },
+          { y: obj[0]['score8'], label: "8" },
+          { y: obj[0]['score9'], label: "9" },
+          { y: obj[0]['score10'], label: "10" },
+          { y: obj[0]['score11'], label: "11" },
+          { y: obj[0]['score12'], label: "12" }
+        ]
+      }]
+    });
+      
+    chart.render();
+
+    document.getElementById("chartContainer").style.display = "block";
+    document.getElementById("results_box").style.height = "600px";
+    document.getElementById("results_box").style.width = "800px";
     document.getElementById("keyboard").style.display = "none";
     document.getElementById("input").style.display = "none";
     document.getElementById("result").style.display = "initial";
     document.getElementById("test1_reload").style.display = "block";
-    this.result = "You achieved " + this.points.toString() + " points";
+    this.result = "You score is " + this.points.toString() + " points!";
   }
 
   getResult() {

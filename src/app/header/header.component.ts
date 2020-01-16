@@ -41,7 +41,7 @@ export class HeaderComponent{
         document.getElementById("web_title").style.marginTop = "25px";
       }
       else{
-        console.log('hahahah');
+        console.log('jebal to pes');
         document.getElementById("header").style.height = "75px";
         document.getElementById("main-logo").style.width = "100px";
         document.getElementById("horizontalLine").style.height = "40px";

@@ -2,7 +2,7 @@
     text-align: center;
     margin: auto;
     margin-bottom: 70px;
-    height:970px;
+    height:100%;
     width: 100%;
     overflow: auto;
 
@@ -15,52 +15,62 @@
 
 #frontWindow {
     color: black;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    width: 50vh;
-    height: 30h;
-    background-color: white;
-    display: inline-block;
+    width: 60%;
+    height: 40h;
     text-align: center;
     margin: auto;
-    margin-left:  -190px;
-    margin-top: 230px;
-    padding-bottom: 20px;
-    border-radius: 10px;
+}
+#frontWindow .content{
+    position: absolute;
+    width: 100%;
+    height: 290px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    background-color: #eee;
+    margin-top: 130px;
+    border-radius: 2px;
+    padding-bottom: 16px;
 }
 #frontWindow #btn{
-    margin-top: 15px;
-    padding: 2px 15px;
-    font-size: 17px;
+    color: #49c9e3;
+    background-color: #eee;
+    margin-top: 30px;
+    padding: 6px 24px;
+    font-size: 19px;
     border-radius: 2px;
     border-width: 2px;
-    font-size: 18px;
+    border: solid;
+    border-width: 2px;
+    transition: 0.2s;
 }
 #frontWindow #btn:hover{
+    color: white;
     background-color: #49c9e3;
-    border-color:  #49c9e3;
-}
-#frontWindow p{
-    text-align: center;
-    margin: 20px 10px;
-    font-size: 17px;
+    border-color: #49c9e3;
 }
 
 #frontTime {
+    margin-top: 50px;
+    font-size: 60px;
     display: none;
 }
 #frontText{
-    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    margin-top: 30px;
 }
 #testBlock {
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-top: 60px;
-    width: 100vh;
-    height: 67%;
-    background-color: rgba(32, 54, 75, 0.96);
-    border-radius: 10px;
+    width: 100%;
+    height: 45vw;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: rgba(155, 161, 167, 0.96);
+    border-radius: 2px;
 }
 
 #test{
@@ -74,7 +84,7 @@
 #matrixNumber {
     background-color: white;
     width: 7vw;
-    font-size: 18px;
+    font-size: 29px;
     height: 7vw;
     margin: 1vw;
     text-align: center;
@@ -83,16 +93,21 @@
     background-color: #49c9e3;
     border-color: #49c9e3;
 }
-
-
+.testWrapper{
+    text-align: center;
+    margin: auto;
+    width: 30%;
+}
 #countDown {
     display: none;
     text-align: center;
     margin:auto;
-    width: 30vw;
-    height: 3vh;
+    width: 100%;
+    height: 27px;
     border-style: none;
     margin-top: 4vh;
+    border: solid;
+    border-width: 1px;
 }
 
 #countBar {
@@ -101,27 +116,53 @@
     background-color: #49c9e3;
 }
 
+#chartWrapper{
+    position: relative;
+    margin-right: auto;
+    text-align: center;
+    align-content: center;
+    width: 20vw;
+}
+
+#chartContainer{
+    display: block;
+    height: 200px; 
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    align-content: center;
+}
+
 /*adddded*/
 #results {
     display: none;
     margin: auto;
     text-align: center;
+    width: 35vw;
     /*added*/
     margin-top: 60px;
     /*added*/
 }
 /*added*/
 #results button{
-    margin-top: 60px;
-    padding: 8px 28px;
-    font-size: 17px;
+    display: block;
+    color: #49c9e3;
+    background-color: #eee;
+    padding: 6px 24px;
+    font-size: 19px;
     border-radius: 2px;
     border-width: 2px;
-    font-size: 18px;
+    border: solid;
+    border-width: 2px;
+    transition: 0.2s;
+    margin:auto;
+    margin-top: 208px;
+    text-align: center;
 }
 #results button:hover{
+    color: white;
     background-color: #49c9e3;
-    border-color:  #49c9e3;
+    border-color: #49c9e3;
 }
 
 #results p{
@@ -132,18 +173,28 @@
     margin-bottom: 20px;
 }
 
+#showRes{
+    text-align: center;
+    margin: auto;
+}
 #showRes #showResBtn{
-    margin-top: 15px;
-    padding: 2px 15px;
-    font-size: 17px;
+    color: #49c9e3;
+    background-color: #eee;
+    margin-top: 30px;
+    padding: 6px 24px;
+    font-size: 19px;
     border-radius: 2px;
     border-width: 2px;
-    font-size: 18px;
+    border: solid;
+    border-width: 2px;
+    transition: 0.2s;
 }
 
+
 #showRes #showResBtn:hover{
+    color: white;
     background-color: #49c9e3;
-    border-color:  #49c9e3;
+    border-color: #49c9e3;
 }
 
 .warning {

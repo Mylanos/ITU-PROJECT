@@ -7,12 +7,15 @@ poradí od 1 po 9.
 */
 
 import { Component, OnInit, Input } from '@angular/core';
+import * as CanvasJS from '../canvasjs.min';
 
 @Component({
   selector: 'app-test2',
   templateUrl: './test2.component.html',
   styleUrls: ['./test2.component.css']
 })
+
+
 export class Test2Component implements OnInit {
 
   private genNumberArray: number [] = new Array();
@@ -20,9 +23,10 @@ export class Test2Component implements OnInit {
   private hideNumbersFlag: boolean [] = new Array();
   private testStartFlag = false;
   private expectedInput = 1;
-  private result = "Your score: (tu môže byť aj nejaký fancy graf že ako ti to išlo)";
+  private result = "Your score: ";
 
   ngOnInit() {
+
     //vyplní sa 9 indexov flag array
     for(var f=0; f<9; f++) {
       this.hideNumbersFlag.push(false);
@@ -52,6 +56,9 @@ export class Test2Component implements OnInit {
     document.getElementById("showRes").style.display = "none";
   }
 
+
+
+
   explClick() {
     //hide guide
     document.getElementById("btn").style.display = "none";
@@ -59,6 +66,9 @@ export class Test2Component implements OnInit {
     document.getElementById("frontTime").style.display = "initial";
     this.startCountdown();
   }
+
+
+
 
   startCountdown() {
     let intervalId = setInterval(() => {
@@ -70,9 +80,15 @@ export class Test2Component implements OnInit {
     }, 1000)
   }
 
+
+
+
   getTimeCounter() {
     return this.timeCounter;
   }
+
+
+
 
   //called from html
   getNumber(position: number) {
@@ -83,6 +99,10 @@ export class Test2Component implements OnInit {
       return this.genNumberArray[position - 1]; //indexing from 0
     }
   }
+
+
+
+
 
   startTest() {
     document.getElementById("results").style.display = "none";            //hide results
@@ -107,6 +127,9 @@ export class Test2Component implements OnInit {
     }, 1000)
   }
 
+
+
+
   numberClick(num: number) {
     //if test started
     if(this.testStartFlag) {
@@ -127,7 +150,7 @@ export class Test2Component implements OnInit {
         x[num-1].style.backgroundColor = "#E93E3E";
         x[num-1].style.borderColor = "#E93E3E";
 
-        document.getElementById("showRes").style.display = "initial";
+        document.getElementById("showRes").style.display = "block";
       }
     }
     if(this.expectedInput == 10) {
@@ -135,12 +158,56 @@ export class Test2Component implements OnInit {
     }
   }
 
+
   showResults() {
     document.getElementById("showRes").style.display = "none";
+    document.getElementById("contentFront").style.height = "520px";
     this.endTest(false);
   }
 
+
   endTest(state: boolean) {
+
+
+    //tu skúsime XmlHttpRequest-ovať
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/script.php", false);
+    xhttp.setRequestHeader("TEST2", (this.expectedInput-1).toString());
+    xhttp.send();
+    console.log(xhttp.responseText);
+
+    xhttp.open("GET", "http://localhost:8080/test2.json", false);
+    xhttp.send();
+    var obj = JSON.parse(xhttp.responseText);
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      exportEnabled: false,
+      zoomEnabled: true,
+      backgroundColor: "#eee",
+      title: {
+        text: "Average scores"
+      },
+      data: [{
+        type: "column",
+        horizontalAlign: "center",
+      verticalAlign: "center",
+        dataPoints: [
+          { y: obj[0]['score1'], label: "1" },
+          { y: obj[0]['score2'], label: "2" },
+          { y: obj[0]['score3'], label: "3" },
+          { y: obj[0]['score4'], label: "4" },
+          { y: obj[0]['score5'], label: "5" },
+          { y: obj[0]['score6'], label: "6" },
+          { y: obj[0]['score7'], label: "7" },
+          { y: obj[0]['score8'], label: "8" },
+          { y: obj[0]['score9'], label: "9" }
+        ]
+      }]
+    });
+      
+    chart.render();
+
     document.getElementById("test").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
     document.getElementById("frontWindow").style.display = "inline-block"; 

@@ -21,7 +21,6 @@ export class Stats1Service {
       var score = 0;
       var size;
       while(score < 30){
-        console.log("robiim tu kokocicjnnuuu")
         if(score < 6){
           size = score * 2;
         }
@@ -39,12 +38,13 @@ export class Stats1Service {
             size = 0;
           }
         }
-        this.results1.push({score: score, square: size});
+      this.results1.push({"scoreTest1": score, "square": size});
         this.ammount.push(size);
         score = score + 1;
       }
     }
-    console.log(this.results1);
+    //console.log(this.results1);
+    //console.log(this.ammount);
   }
 
   addResult(value: number){

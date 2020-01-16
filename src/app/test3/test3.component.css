@@ -2,7 +2,7 @@
     text-align: center;
     margin: auto;
     margin-top: 160px;
-    height: 750px;
+    height: 100%;
 }
 .testWindow h2 {
     margin: auto;
@@ -11,12 +11,12 @@
 }
 
 #frontWindow {
-    color: white;
+    color: black;
     position: absolute;
     z-index: 1;
     width: 70vh;
     height: 18vw;
-    background-color: rgba(32, 54, 75, 0.96);
+    background-color: #eee;
     display: inline-block;
     text-align: center;
     margin: auto;
@@ -49,10 +49,15 @@
 }
 
 #test {
-    display: none;
-    width: 50vw;
+    display: inline-block;
+    width: 100%;
+    height: 50vw;
+    padding: 60px;
     text-align: center;
     margin: auto;
+    background-color: rgba(155, 161, 167, 0.96);
+    border-radius: 2px;
+    margin-bottom: 100px;
 }
 #test button{
     margin-top: 15px;
@@ -88,6 +93,12 @@
 #results button:hover{
     background-color: #49c9e3;
     border-color:  #49c9e3;
+}
+#testContent{
+    display: none;
+    width: 50vw;
+    text-align: center;
+    margin: auto;
 }
 #test img{
     width: 100%;

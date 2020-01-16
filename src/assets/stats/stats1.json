@@ -1,0 +1,59 @@
+{
+	"statsTest1": [{
+			"score": "1",
+			"ammount": "0"
+		},
+		{
+			"score": "2",
+			"ammount": "1"
+		},
+		{
+			"score": "3",
+			"ammount": "1"
+		},
+		{
+			"score": "4",
+			"ammount": "2"
+		},
+		{
+			"score": "5",
+			"ammount": "2"
+		},
+		{
+			"score": "6",
+			"ammount": "3"
+		},
+		{
+			"score": "7",
+			"ammount": "7"
+		},
+		{
+			"score": "8",
+			"ammount": "10"
+		},
+		{
+			"score": "9",
+			"ammount": "20"
+		},
+		{
+			"score": "10",
+			"ammount": "16"
+		},
+		{
+			"score": "11",
+			"ammount": "8"
+		},
+		{
+			"score": "12",
+			"ammount": "6"
+		},
+		{
+			"score": "13",
+			"ammount": "3"
+		},
+		{
+			"score": "14",
+			"ammount": "2"
+		}
+	]
+}
