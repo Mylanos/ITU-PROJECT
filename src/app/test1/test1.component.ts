@@ -252,12 +252,15 @@ export class Test1Component{
       colorSet:  "customColorSet1",
       animationEnabled: true,
       exportEnabled: false,
+      backgroundColor: "#eee",
       title: {
-        text: "Basic Column Chart in Angular"
+        text: "Average scores achieved in this test"
       },
       data: [{
         type: "column",
+        backgroundColor: "#eee",
         dataPoints: [
+          { y: obj[0]['score0'], label: "0" },
           { y: obj[0]['score1'], label: "1" },
           { y: obj[0]['score2'], label: "2" },
           { y: obj[0]['score3'], label: "3" },

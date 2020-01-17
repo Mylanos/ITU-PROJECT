@@ -1,16 +1,22 @@
 <div class="testWindow">
     <h2>IMAGE TEST</h2>
     <div id="frontWindow">
-        <p id="frontText">
-            This test generates images, your goal is to remember images that were already shown. When you'll think that some image did repeat, click on the button under image.
-        </p>
-        <p id="frontTime">
-            {{getTimeCounter()}}
-        </p>
-        <button id="btn" (click)="explClick()" >I understand</button>
-        <div id="results">
-                <p>Points: {{getPoints()}}</p>
-                <button (click)="restartTest()">Play again</button>
+        <div id="contentId" class="content">
+            <p id="frontText">
+                This test generates images, your goal is to remember images that were already shown. When you'll think that some image did repeat, click on the button under image.
+            </p>
+            <p id="frontTime">
+                {{getTimeCounter()}}
+            </p>
+            <button id="btnUnderstand" (click)="explClick()" >I UNDERSTAND</button>
+            <div id="results">
+                    <p>Points: {{getPoints()}}</p>
+                    <div class="chartWrapper">
+                            <div id="chartContainer">
+                            </div>
+                        </div>
+                    <button (click)="restartTest()">PLAY AGAIN</button>
+            </div>
         </div>
     </div>
 
@@ -18,7 +24,7 @@
             <DIV id="testContent">
                 <p>POINTS: {{getPoints()}}</p>
                 <img src={{getImgSource()}}>
-                <button (click)="btnClick()">Click me</button>
+                <button (click)="btnClick()">CLICK ME</button>
             </DIV>
     </div>
 

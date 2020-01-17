@@ -195,8 +195,9 @@ export class Test2Component implements OnInit {
       colorSet:  "customColorSet1",
       animationEnabled: true,
       exportEnabled: false,
+      backgroundColor: "#eee",
       title: {
-        text: "Basic Column Chart in Angular"
+        text: "Average scores achieved in this test"
       },
       data: [{
         type: "column",

@@ -13,6 +13,7 @@ export class StatsComponent implements OnInit {
   ngOnInit() {
 
     document.getElementById("button").style.display="none";
+    document.getElementById("msg").style.display="none";
     document.getElementById("chartContainer1").style.display="none";
     document.getElementById("chartContainer2").style.display="none";
     document.getElementById("chartContainer3").style.display="none";
@@ -27,6 +28,7 @@ export class StatsComponent implements OnInit {
     else {
       //display button to loginPage
       document.getElementById("button").style.display="initial";
+      document.getElementById("msg").style.display="initial";
     }
 
     var xhttp = new XMLHttpRequest();
@@ -47,6 +49,7 @@ export class StatsComponent implements OnInit {
 
      let chart1 = new CanvasJS.Chart("chartContainer1", {
       colorSet:  "customColorSet1",
+      width:420,
       animationEnabled: true,
       exportEnabled: false,
       title: {
@@ -67,6 +70,7 @@ export class StatsComponent implements OnInit {
     let chart2 = new CanvasJS.Chart("chartContainer2", {
       colorSet:  "customColorSet1",
       animationEnabled: true,
+      width:420,
       exportEnabled: false,
       title: {
         text: "Test 2 - Average Score "
@@ -87,6 +91,7 @@ export class StatsComponent implements OnInit {
       colorSet:  "customColorSet1",
       animationEnabled: true,
       exportEnabled: false,
+      width:420,
       title: {
         text: "Test 3 - Average Score "
       },
