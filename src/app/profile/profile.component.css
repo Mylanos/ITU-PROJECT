@@ -1,0 +1,30 @@
+.top {
+    margin-top: 120px;
+  }
+  .row {
+      margin-top: 10%;
+      display: flex;
+  }
+    
+  .column {
+      text-align: center;
+      flex: 50%;
+  }
+  p{
+      text-align: center;
+      font-size: 35px;
+  }
+  .button {
+    background-color: #49c9e3; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 3%;
+  }
+  .button:hover{
+      text-decoration: underline;
+  }

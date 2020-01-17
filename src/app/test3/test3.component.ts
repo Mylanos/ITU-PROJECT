@@ -8,6 +8,7 @@ za nesprávnu sa jeden bod odráta.
 
 import { Component, OnInit } from '@angular/core';
 import { TimeInterval, timer } from 'rxjs';
+import * as CanvasJS from '../canvasjs.min';
 
 @Component({
   selector: 'app-test3',
@@ -57,7 +58,7 @@ export class Test3Component implements OnInit {
 
   explClick() {
     //hide guide
-    document.getElementById("btn").style.display = "none";
+    document.getElementById("btnUnderstand").style.display = "none";
     document.getElementById("frontText").textContent = "Test starts in:";
     document.getElementById("frontTime").style.display = "initial";
     this.startCountdown();
@@ -78,6 +79,8 @@ export class Test3Component implements OnInit {
   }
 
   startTest() {
+    document.getElementById("testContent").style.fontSize = "30px";
+    document.getElementById("testContent").style.display = "block";
     document.getElementById("frontWindow").style.display = "none";        //hide front window
     document.getElementById("test").style.display = "inline-block";       //display test
 
@@ -166,7 +169,49 @@ export class Test3Component implements OnInit {
 
     console.log('TEST 3 ', xhttp.responseText);
 
-    document.getElementById("test").style.display = "none";
+    xhttp.open("GET", "http://localhost:8080/test3.json", false);
+    xhttp.send();
+    var obj = JSON.parse(xhttp.responseText);
+
+    CanvasJS.addColorSet("customColorSet1",
+      [//colorSet Array
+        "#75abd1",
+        "#085c96",
+        "#588aad",
+        "#447394",
+        "#0b74bd",
+        "#305f80",
+        "#1b4d70",
+     ]); 
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      colorSet:  "customColorSet1",
+      animationEnabled: true,
+      exportEnabled: false,
+      backgroundColor: "#eee",
+      width:520,
+      title: {
+        text: "Average scores achieved in this test"
+      },
+      data: [{
+        type: "column",
+        dataPoints: [
+          { y: obj[0]['score1'], label: "1" },
+          { y: obj[0]['score2'], label: "2" },
+          { y: obj[0]['score3'], label: "3" },
+          { y: obj[0]['score4'], label: "4" },
+          { y: obj[0]['score5'], label: "5" },
+          { y: obj[0]['score6'], label: "6" },
+          { y: obj[0]['score7'], label: "7" },
+          { y: obj[0]['score8'], label: "8" },
+          { y: obj[0]['score9'], label: "9" }
+        ]
+      }]
+    });
+      
+    chart.render();
+    document.getElementById("contentId").style.height = "620px";
+    document.getElementById("testContent").style.display = "none";
     document.getElementById("results").style.display = "inline-block";
     document.getElementById("frontWindow").style.display = "inline-block";        //hide front window
     document.getElementById("frontText").style.display = "none";        //hide front window

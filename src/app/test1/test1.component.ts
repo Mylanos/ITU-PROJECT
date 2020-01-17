@@ -1,3 +1,4 @@
+import { Stats1Service } from './../stats1.service';
 /*
 Test pozostáva z 5 po sebe idúcich testov,
 pri čom prvé kolo si užívateľ musí zapamätať 4 číslice,
@@ -9,6 +10,7 @@ za toto kolo 3 body, pretože správne zadal 3 číslice.
 
 import { Component, OnInit, HostListener } from '@angular/core';
 import { I18nSelectPipe } from '@angular/common';
+import * as CanvasJS from '../canvasjs.min';
 declare var $: any;
 
 @Component({
@@ -19,6 +21,15 @@ declare var $: any;
 
 export class Test1Component{
   
+  ngAfterViewInit(){
+    console.log('zavolalo ma toooo');
+    this.statsService.initResults();
+  }
+
+  constructor(
+    public statsService: Stats1Service
+  ){}
+
   private  startLength = 4;         //Number of testing elements
   private finalLength = 7;
   private points = 0;
@@ -203,6 +214,7 @@ export class Test1Component{
         this.points += 1;
       }
     }
+    this.statsService.addResult(this.points);
   }
 
   restartTest(){
@@ -210,21 +222,71 @@ export class Test1Component{
   }
 
   endTest() {
-
+    var results = this.statsService.getResults();
+    console.log(results);
     this.calcScore();
 
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:8080/script.php", false);
     xhttp.setRequestHeader("TEST1", (this.points).toString());
     xhttp.send();
-
+  
     console.log('TEST 1 ', xhttp.responseText);
 
+    xhttp.open("GET", "http://localhost:8080/test1.json", false);
+    xhttp.send();
+    var obj = JSON.parse(xhttp.responseText);
+
+    CanvasJS.addColorSet("customColorSet1",
+      [//colorSet Array
+        "#75abd1",
+        "#085c96",
+        "#588aad",
+        "#447394",
+        "#0b74bd",
+        "#305f80",
+        "#1b4d70",
+     ]); 
+
+    let chart = new CanvasJS.Chart("chartContainer", {
+      colorSet:  "customColorSet1",
+      animationEnabled: true,
+      exportEnabled: false,
+      backgroundColor: "#eee",
+      title: {
+        text: "Average scores achieved in this test"
+      },
+      data: [{
+        type: "column",
+        backgroundColor: "#eee",
+        dataPoints: [
+          { y: obj[0]['score0'], label: "0" },
+          { y: obj[0]['score1'], label: "1" },
+          { y: obj[0]['score2'], label: "2" },
+          { y: obj[0]['score3'], label: "3" },
+          { y: obj[0]['score4'], label: "4" },
+          { y: obj[0]['score5'], label: "5" },
+          { y: obj[0]['score6'], label: "6" },
+          { y: obj[0]['score7'], label: "7" },
+          { y: obj[0]['score8'], label: "8" },
+          { y: obj[0]['score9'], label: "9" },
+          { y: obj[0]['score10'], label: "10" },
+          { y: obj[0]['score11'], label: "11" },
+          { y: obj[0]['score12'], label: "12" }
+        ]
+      }]
+    });
+      
+    chart.render();
+
+    document.getElementById("chartContainer").style.display = "block";
+    document.getElementById("results_box").style.height = "600px";
+    document.getElementById("results_box").style.width = "800px";
     document.getElementById("keyboard").style.display = "none";
     document.getElementById("input").style.display = "none";
     document.getElementById("result").style.display = "initial";
     document.getElementById("test1_reload").style.display = "block";
-    this.result = "You achieved " + this.points.toString() + " points";
+    this.result = "You score is " + this.points.toString() + " points!";
   }
 
   getResult() {

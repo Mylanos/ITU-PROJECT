@@ -31,6 +31,7 @@ export class HeaderComponent{
     //if scrolled change header
     if(document.body.scrollTop > 60 || document.documentElement.scrollTop > 60){
       if(document.body.clientWidth < 800){ 
+        console.log('testsss');
         document.getElementById("header").style.height = "80px";
         document.getElementById("main-logo").style.width = "100px";
         document.getElementById("horizontalLine").style.height = "40px";
@@ -40,6 +41,7 @@ export class HeaderComponent{
         document.getElementById("web_title").style.marginTop = "25px";
       }
       else{
+        console.log('jebal to pes');
         document.getElementById("header").style.height = "75px";
         document.getElementById("main-logo").style.width = "100px";
         document.getElementById("horizontalLine").style.height = "40px";
@@ -52,6 +54,7 @@ export class HeaderComponent{
     }
     else{
       if(document.body.clientWidth < 800){ 
+        console.log('aaaaaa');
         document.getElementById("header").style.height = "129px";
         document.getElementById("main-logo").style.width = "170px";
         document.getElementById("horizontalLine").style.height = "60px";

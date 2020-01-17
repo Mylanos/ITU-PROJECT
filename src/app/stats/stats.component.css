@@ -1,16 +1,42 @@
+#statsComponent{
+    height: 700px;
+}
+.content {
+    vertical-align: middle;
+    text-align: center;
+}
+.top {
+    margin-top: 80px;
+}
+.idk {
+    margin-top: 30%;
+}
+
+.row {
+ 
+    margin-top: 10%;
+    display: flex;  
+}
+
 .window {
-    padding-top: 150px;
-    padding-bottom: 200px;
+    margin-left: 2%;
+    vertical-align: middle;
+    text-align: center;
+    flex: 20%;
+
 }
 
 ._button{
-    text-align: center;
+    margin-top: 100px;
     height: 50px;
-    color: black;
-    font-size: 25px;
-    border: solid;
-    border-width: 1px;
-    border-color: black;
+    background-color: #49c9e3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 3%;
 }
 ._button:hover{
     background-color:  #49c9e3;

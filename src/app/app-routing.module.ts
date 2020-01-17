@@ -1,9 +1,9 @@
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
+import { StatsComponent } from './stats/stats.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SigninComponent } from './signin/signin.component';
-import { StatsComponent } from './stats/stats.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SectionIntroComponent } from './section-intro/section-intro.component';
@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'test1', component: Test1Component},
   {path: 'test2', component: Test2Component},
   {path: 'test3', component: Test3Component},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'stats', component: StatsComponent}
+  {path: 'stats', component: StatsComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
@@ -24,3 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

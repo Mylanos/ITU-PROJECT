@@ -7,7 +7,7 @@ poradí od 1 po 9.
 */
 
 import { Component, OnInit, Input } from '@angular/core';
-import * as CanvasJS from './canvasjs.min';
+import * as CanvasJS from '../canvasjs.min';
 
 @Component({
   selector: 'app-test2',
@@ -23,7 +23,7 @@ export class Test2Component implements OnInit {
   private hideNumbersFlag: boolean [] = new Array();
   private testStartFlag = false;
   private expectedInput = 1;
-  private result = "Your score: (tu môže byť aj nejaký fancy graf že ako ti to išlo)";
+  private result = "Your score: ";
 
   ngOnInit() {
 
@@ -150,7 +150,7 @@ export class Test2Component implements OnInit {
         x[num-1].style.backgroundColor = "#E93E3E";
         x[num-1].style.borderColor = "#E93E3E";
 
-        document.getElementById("showRes").style.display = "initial";
+        document.getElementById("showRes").style.display = "block";
       }
     }
     if(this.expectedInput == 10) {
@@ -161,6 +161,7 @@ export class Test2Component implements OnInit {
 
   showResults() {
     document.getElementById("showRes").style.display = "none";
+    document.getElementById("contentFront").style.height = "520px";
     this.endTest(false);
   }
 
@@ -194,8 +195,9 @@ export class Test2Component implements OnInit {
       colorSet:  "customColorSet1",
       animationEnabled: true,
       exportEnabled: false,
+      backgroundColor: "#eee",
       title: {
-        text: "Basic Column Chart in Angular"
+        text: "Average scores achieved in this test"
       },
       data: [{
         type: "column",
@@ -228,15 +230,9 @@ export class Test2Component implements OnInit {
     }
   }
 
-
-
-
   getResult() {
     return this.result;
   }
-
-
-
 
   restartTest() {
     for(var i=0; i<9; i++) {
